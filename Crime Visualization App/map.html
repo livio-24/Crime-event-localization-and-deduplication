@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_f85d2d8d12d54cc7ba3f1e3f39f0eb3a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 520.0px;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_f85d2d8d12d54cc7ba3f1e3f39f0eb3a" ></div>
+        
+</body>
+<script>    
+    
+            var map_f85d2d8d12d54cc7ba3f1e3f39f0eb3a = L.map(
+                "map_f85d2d8d12d54cc7ba3f1e3f39f0eb3a",
+                {
+                    center: [44.647114, 10.925244],
+                    crs: L.CRS.EPSG3857,
+                    preferCanvas: false,
+                    zoom: 11,
+                    zoomControl: true,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_595c12ce1a964ea983f0e4045651360b = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_f85d2d8d12d54cc7ba3f1e3f39f0eb3a);
+        
+    
+            var marker_cluster_19960c4c6f7f46a1b34855048cde60f4 = L.markerClusterGroup(
+                {}
+            );
+            map_f85d2d8d12d54cc7ba3f1e3f39f0eb3a.addLayer(marker_cluster_19960c4c6f7f46a1b34855048cde60f4);
+        
+    
+            var marker_e2c8fb5879404732acc0687ba09911f0 = L.marker(
+                [44.7177411, 11.0330676],
+                {}
+            ).addTo(marker_cluster_19960c4c6f7f46a1b34855048cde60f4);
+        
+    
+            var icon_dfae960e0842404f99e0789b70bea893 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_e2c8fb5879404732acc0687ba09911f0.setIcon(icon_dfae960e0842404f99e0789b70bea893);
+        
+    
+        var popup_3f4b2a48c5294504a50e55fc6f3b3ff9 = L.popup({"maxWidth": 200});
+
+        
+            var html_e9df8dde5d4a4e62871c8e9622c2da1f = $(`<div id="html_e9df8dde5d4a4e62871c8e9622c2da1f" style="width: 100.0%; height: 100.0%;"><a href=https://gazzettadimodena.gelocal.it/modena/cronaca/2020/07/10/news/bomporto-gli-abiti-da-sposa-di-giulia-e-sara-in-salvo-nonostante-il-furto-alla-vigilia-delle-nozze-1.39065734 target="_blank">Bomporto Gli abiti da sposa di Giulia e Sara in salvo nonostante il furto alla vigilia delle nozze</a><br>2020-07-10<br><b>theft</b></div>`)[0];
+            popup_3f4b2a48c5294504a50e55fc6f3b3ff9.setContent(html_e9df8dde5d4a4e62871c8e9622c2da1f);
+        
+
+        marker_e2c8fb5879404732acc0687ba09911f0.bindPopup(popup_3f4b2a48c5294504a50e55fc6f3b3ff9)
+        ;
+
+        
+    
+    
+            var marker_efc4f74f63484bcd8ac7e6bf58a182fc = L.marker(
+                [44.6517424, 10.9270126],
+                {}
+            ).addTo(marker_cluster_19960c4c6f7f46a1b34855048cde60f4);
+        
+    
+            var icon_f5d298ee5cc6431889da3b1af17b0b46 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_efc4f74f63484bcd8ac7e6bf58a182fc.setIcon(icon_f5d298ee5cc6431889da3b1af17b0b46);
+        
+    
+        var popup_6538ea9b784f4250a51893727dbbdd37 = L.popup({"maxWidth": 200});
+
+        
+            var html_4d3a55678cbf4df38a5078385ad3d454 = $(`<div id="html_4d3a55678cbf4df38a5078385ad3d454" style="width: 100.0%; height: 100.0%;"><a href=https://gazzettadimodena.gelocal.it/modena/cronaca/2020/07/01/news/modena-pregiudicato-tenta-rapina-in-via-ganaceto-1.39031175 target="_blank">Modena, pregiudicato tenta rapina in via Ganaceto</a><br>2020-07-01<br><b>theft</b></div>`)[0];
+            popup_6538ea9b784f4250a51893727dbbdd37.setContent(html_4d3a55678cbf4df38a5078385ad3d454);
+        
+
+        marker_efc4f74f63484bcd8ac7e6bf58a182fc.bindPopup(popup_6538ea9b784f4250a51893727dbbdd37)
+        ;
+
+        
+    
+    
+            var marker_059b596f4a95493fbe641005e61fc520 = L.marker(
+                [44.5988813, 11.0554824],
+                {}
+            ).addTo(marker_cluster_19960c4c6f7f46a1b34855048cde60f4);
+        
+    
+            var icon_304e4ac7d1814e04bc5b986f97122367 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_059b596f4a95493fbe641005e61fc520.setIcon(icon_304e4ac7d1814e04bc5b986f97122367);
+        
+    
+        var popup_db9345dbb7c84255aa180aab6b5477d3 = L.popup({"maxWidth": 200});
+
+        
+            var html_ee64149b833a4c3a84f2617be7fd5ee9 = $(`<div id="html_ee64149b833a4c3a84f2617be7fd5ee9" style="width: 100.0%; height: 100.0%;"><a href=https://gazzettadimodena.gelocal.it/modena/cronaca/2020/07/09/news/castelfranco-giovane-preso-a-pugni-volevano-la-sua-bici-1.39063678 target="_blank">Castelfranco Giovane preso a pugni: «Volevano la sua bici»</a><br>2020-07-09<br><b>attack</b></div>`)[0];
+            popup_db9345dbb7c84255aa180aab6b5477d3.setContent(html_ee64149b833a4c3a84f2617be7fd5ee9);
+        
+
+        marker_059b596f4a95493fbe641005e61fc520.bindPopup(popup_db9345dbb7c84255aa180aab6b5477d3)
+        ;
+
+        
+    
+    
+            var marker_df378c1e1b6a4b718164f480b71a9245 = L.marker(
+                [44.6517424, 10.9270126],
+                {}
+            ).addTo(marker_cluster_19960c4c6f7f46a1b34855048cde60f4);
+        
+    
+            var icon_1675c165a85645599c986871f48578bb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_df378c1e1b6a4b718164f480b71a9245.setIcon(icon_1675c165a85645599c986871f48578bb);
+        
+    
+        var popup_5cce77bd91cb42d39fda7212175a15a5 = L.popup({"maxWidth": 200});
+
+        
+            var html_fc995d78342340588f7d22f885cb6952 = $(`<div id="html_fc995d78342340588f7d22f885cb6952" style="width: 100.0%; height: 100.0%;"><a href=https://gazzettadimodena.gelocal.it/modena/cronaca/2020/07/03/news/pomposa-a-modena-aggressioni-in-gelateria-e-ristorante-1.39036744 target="_blank">Pomposa a Modena: aggressioni in gelateria e ristorante</a><br>2020-07-02<br><b>drug dealing</b></div>`)[0];
+            popup_5cce77bd91cb42d39fda7212175a15a5.setContent(html_fc995d78342340588f7d22f885cb6952);
+        
+
+        marker_df378c1e1b6a4b718164f480b71a9245.bindPopup(popup_5cce77bd91cb42d39fda7212175a15a5)
+        ;
+
+        
+    
+    
+            var marker_fb486eb46fa440d8a66310f57fd29ae7 = L.marker(
+                [44.6485118, 10.928181],
+                {}
+            ).addTo(marker_cluster_19960c4c6f7f46a1b34855048cde60f4);
+        
+    
+            var icon_2543b9df8d104f1a8354e5599a66d087 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_fb486eb46fa440d8a66310f57fd29ae7.setIcon(icon_2543b9df8d104f1a8354e5599a66d087);
+        
+    
+        var popup_a690c260acf448369c9dcee124610014 = L.popup({"maxWidth": 200});
+
+        
+            var html_43a84ee120db42ee8c042984fe8450d0 = $(`<div id="html_43a84ee120db42ee8c042984fe8450d0" style="width: 100.0%; height: 100.0%;"><a href=https://gazzettadimodena.gelocal.it/modena/cronaca/2020/07/04/news/modena-monopattini-l-ora-delle-regole-vigili-in-piazza-per-spiegare-come-e-dove-va-usato-1.39043502 target="_blank">Modena, monopattino: l'ora delle regole Vigili in piazza per spiegare come e dove va usato</a><br>2020-07-04<br><b>theft</b></div>`)[0];
+            popup_a690c260acf448369c9dcee124610014.setContent(html_43a84ee120db42ee8c042984fe8450d0);
+        
+
+        marker_fb486eb46fa440d8a66310f57fd29ae7.bindPopup(popup_a690c260acf448369c9dcee124610014)
+        ;
+
+        
+    
+    
+            var marker_51798177dfef4cbfa5327c388821b32c = L.marker(
+                [44.658626, 10.8669321],
+                {}
+            ).addTo(marker_cluster_19960c4c6f7f46a1b34855048cde60f4);
+        
+    
+            var icon_90d1396b228a4b4ea899421f7d26c74c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_51798177dfef4cbfa5327c388821b32c.setIcon(icon_90d1396b228a4b4ea899421f7d26c74c);
+        
+    
+        var popup_3792062c22d24ecf8a15dc898f2f928f = L.popup({"maxWidth": 200});
+
+        
+            var html_d2cff4968eec412c9f73caa1504e9581 = $(`<div id="html_d2cff4968eec412c9f73caa1504e9581" style="width: 100.0%; height: 100.0%;"><a href=http://www.modenatoday.it/cronaca/rapina-aggressione-prostituta-viale-virgilio-3-luglio-2020.html target="_blank">Colpisce una prostituta con una catena e cerca di rapinarla, arrestato un 32enne</a><br>2020-07-03<br><b>robbery</b></div>`)[0];
+            popup_3792062c22d24ecf8a15dc898f2f928f.setContent(html_d2cff4968eec412c9f73caa1504e9581);
+        
+
+        marker_51798177dfef4cbfa5327c388821b32c.bindPopup(popup_3792062c22d24ecf8a15dc898f2f928f)
+        ;
+
+        
+    
+    
+            var marker_529ab7f36bb6496791ba511d374ab697 = L.marker(
+                [44.7262244, 11.0997072],
+                {}
+            ).addTo(marker_cluster_19960c4c6f7f46a1b34855048cde60f4);
+        
+    
+            var icon_2dcd327ad6954a02ac45dbe1351b1c84 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_529ab7f36bb6496791ba511d374ab697.setIcon(icon_2dcd327ad6954a02ac45dbe1351b1c84);
+        
+    
+        var popup_6cd1c779fb31410c8298c08f76d24635 = L.popup({"maxWidth": 200});
+
+        
+            var html_9674327b80a04818ae1fc814cb0ec497 = $(`<div id="html_9674327b80a04818ae1fc814cb0ec497" style="width: 100.0%; height: 100.0%;"><a href=https://gazzettadimodena.gelocal.it/modena/cronaca/2020/07/06/news/ravarino-garage-in-fiamme-salvo-sul-balcone-1.39049978 target="_blank">Ravarino Garage in fiamme «Salvo sul balcone»</a><br>2020-07-06<br><b>theft</b></div>`)[0];
+            popup_6cd1c779fb31410c8298c08f76d24635.setContent(html_9674327b80a04818ae1fc814cb0ec497);
+        
+
+        marker_529ab7f36bb6496791ba511d374ab697.bindPopup(popup_6cd1c779fb31410c8298c08f76d24635)
+        ;
+
+        
+    
+    
+            var marker_adf39f240f3a4e689646a202b5e77bc0 = L.marker(
+                [44.6527892, 10.9338924637607],
+                {}
+            ).addTo(marker_cluster_19960c4c6f7f46a1b34855048cde60f4);
+        
+    
+            var icon_c7a431277ff74b8992e69d68a63c8a25 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_adf39f240f3a4e689646a202b5e77bc0.setIcon(icon_c7a431277ff74b8992e69d68a63c8a25);
+        
+    
+        var popup_e9ff088d80174c3c9e236a7fc99568f2 = L.popup({"maxWidth": 200});
+
+        
+            var html_61bf0594f2174be69df823ad094e55f4 = $(`<div id="html_61bf0594f2174be69df823ad094e55f4" style="width: 100.0%; height: 100.0%;"><a href=https://gazzettadimodena.gelocal.it/modena/cronaca/2020/07/06/news/modena-degrado-e-risse-nella-zona-dell-ex-ristorante-8-brooklyn-1.39049934 target="_blank">Modena Degrado e risse nella zona dell'ex ristorante 8 Brooklyn&nbsp;</a><br>2020-07-06<br><b>drug dealing</b></div>`)[0];
+            popup_e9ff088d80174c3c9e236a7fc99568f2.setContent(html_61bf0594f2174be69df823ad094e55f4);
+        
+
+        marker_adf39f240f3a4e689646a202b5e77bc0.bindPopup(popup_e9ff088d80174c3c9e236a7fc99568f2)
+        ;
+
+        
+    
+    
+            var marker_b2575a31a6394e6bbcb92d0e2f2d7f8e = L.marker(
+                [44.723795, 11.1451911],
+                {}
+            ).addTo(marker_cluster_19960c4c6f7f46a1b34855048cde60f4);
+        
+    
+            var icon_6849f65e15c0467caf86547670e53ccb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_b2575a31a6394e6bbcb92d0e2f2d7f8e.setIcon(icon_6849f65e15c0467caf86547670e53ccb);
+        
+    
+        var popup_436e49d0230f44c6b5aa7040b2a33a2a = L.popup({"maxWidth": 200});
+
+        
+            var html_41aa92f324c14018afa8a96b8387384a = $(`<div id="html_41aa92f324c14018afa8a96b8387384a" style="width: 100.0%; height: 100.0%;"><a href=https://gazzettadimodena.gelocal.it/modena/cronaca/2020/07/06/news/modena-viale-gramsci-due-accoltellati-subito-arrestato-1.39049932 target="_blank">Modena Viale Gramsci, due accoltellati: subito arrestato</a><br>2020-07-06<br><b>attack</b></div>`)[0];
+            popup_436e49d0230f44c6b5aa7040b2a33a2a.setContent(html_41aa92f324c14018afa8a96b8387384a);
+        
+
+        marker_b2575a31a6394e6bbcb92d0e2f2d7f8e.bindPopup(popup_436e49d0230f44c6b5aa7040b2a33a2a)
+        ;
+
+        
+    
+    
+            var marker_97fcba071a5c412f81fff2a458e94fe9 = L.marker(
+                [44.6432623, 10.9266017],
+                {}
+            ).addTo(marker_cluster_19960c4c6f7f46a1b34855048cde60f4);
+        
+    
+            var icon_084e7f95e9494749a0acd43e1d45ea7c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_97fcba071a5c412f81fff2a458e94fe9.setIcon(icon_084e7f95e9494749a0acd43e1d45ea7c);
+        
+    
+        var popup_d852b46498954c7fa5709df99cc8a180 = L.popup({"maxWidth": 200});
+
+        
+            var html_611ffb6ee4c642a9861487c67e5452ae = $(`<div id="html_611ffb6ee4c642a9861487c67e5452ae" style="width: 100.0%; height: 100.0%;"><a href=https://gazzettadimodena.gelocal.it/modena/cronaca/2020/07/11/news/rissa-con-coltellate-denunciati-due-stranieri-1.39072526 target="_blank">Rissa con coltellate: denunciati due stranieri</a><br>2020-07-11<br><b>attack</b></div>`)[0];
+            popup_d852b46498954c7fa5709df99cc8a180.setContent(html_611ffb6ee4c642a9861487c67e5452ae);
+        
+
+        marker_97fcba071a5c412f81fff2a458e94fe9.bindPopup(popup_d852b46498954c7fa5709df99cc8a180)
+        ;
+
+        
+    
+    
+            var marker_0042a94a69e84eafa4caebe97fa3b7a0 = L.marker(
+                [44.54018445, 10.7965846469977],
+                {}
+            ).addTo(marker_cluster_19960c4c6f7f46a1b34855048cde60f4);
+        
+    
+            var icon_cacc040acc21483580c7d531320c5a1a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_0042a94a69e84eafa4caebe97fa3b7a0.setIcon(icon_cacc040acc21483580c7d531320c5a1a);
+        
+    
+        var popup_8240f7f014a249c581779f9f2b1a7297 = L.popup({"maxWidth": 200});
+
+        
+            var html_375f77a110d842098ba94debf6886800 = $(`<div id="html_375f77a110d842098ba94debf6886800" style="width: 100.0%; height: 100.0%;"><a href=https://gazzettadimodena.gelocal.it/modena/cronaca/2020/07/07/news/sassuolo-punta-la-pistola-contro-un-carabiniere-per-difendere-un-milione-di-euro-di-droga-arrestato-1.39054285 target="_blank">Sassuolo, punta la pistola contro un carabiniere per difendere un milione di euro di droga: arrestato</a><br>2020-07-07<br><b>theft</b></div>`)[0];
+            popup_8240f7f014a249c581779f9f2b1a7297.setContent(html_375f77a110d842098ba94debf6886800);
+        
+
+        marker_0042a94a69e84eafa4caebe97fa3b7a0.bindPopup(popup_8240f7f014a249c581779f9f2b1a7297)
+        ;
+
+        
+    
+    
+            var marker_80c33276486f41218933eb6c399bd1ab = L.marker(
+                [44.6759084, 10.943935499888],
+                {}
+            ).addTo(marker_cluster_19960c4c6f7f46a1b34855048cde60f4);
+        
+    
+            var icon_9414fb18ec394642a97d318e5a711af6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_80c33276486f41218933eb6c399bd1ab.setIcon(icon_9414fb18ec394642a97d318e5a711af6);
+        
+    
+        var popup_a02ae9c82dc84d59ac0ee492c8fa78f9 = L.popup({"maxWidth": 200});
+
+        
+            var html_9266cec617d948de9e5966c0971bcccc = $(`<div id="html_9266cec617d948de9e5966c0971bcccc" style="width: 100.0%; height: 100.0%;"><a href=https://gazzettadimodena.gelocal.it/modena/cronaca/2020/07/07/news/modena-il-cavalcavia-mazzoni-che-unisce-il-degrado-e-lo-spaccio-pochi-cambiamenti-1.39053757 target="_blank">Modena Il cavalcavia Mazzoni, che unisce il degrado e lo spaccio «Pochi cambiamenti»</a><br>2020-07-07<br><b>theft</b></div>`)[0];
+            popup_a02ae9c82dc84d59ac0ee492c8fa78f9.setContent(html_9266cec617d948de9e5966c0971bcccc);
+        
+
+        marker_80c33276486f41218933eb6c399bd1ab.bindPopup(popup_a02ae9c82dc84d59ac0ee492c8fa78f9)
+        ;
+
+        
+    
+    
+            var marker_8b100b89f15244459e767f76a362f687 = L.marker(
+                [44.6473394, 10.9438374],
+                {}
+            ).addTo(marker_cluster_19960c4c6f7f46a1b34855048cde60f4);
+        
+    
+            var icon_9fe92d86afe04c389a275ba9d40c2389 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_8b100b89f15244459e767f76a362f687.setIcon(icon_9fe92d86afe04c389a275ba9d40c2389);
+        
+    
+        var popup_f835dad5c2cc40a6bbde611db4b5777f = L.popup({"maxWidth": 200});
+
+        
+            var html_04fef3b67c4e48b9932e0ce9a0816e76 = $(`<div id="html_04fef3b67c4e48b9932e0ce9a0816e76" style="width: 100.0%; height: 100.0%;"><a href=https://gazzettadimodena.gelocal.it/modena/cronaca/2020/07/09/news/modena-schianto-nella-notte-auto-distrutta-1.39061572 target="_blank">Modena, schianto nella notte: auto distrutta, autista ventunenne illeso</a><br>2020-07-09<br><b>theft</b></div>`)[0];
+            popup_f835dad5c2cc40a6bbde611db4b5777f.setContent(html_04fef3b67c4e48b9932e0ce9a0816e76);
+        
+
+        marker_8b100b89f15244459e767f76a362f687.bindPopup(popup_f835dad5c2cc40a6bbde611db4b5777f)
+        ;
+
+        
+    
+    
+            var marker_8c1db2d936504e33945ec1bec6e33c2b = L.marker(
+                [44.6568188, 10.9119155],
+                {}
+            ).addTo(marker_cluster_19960c4c6f7f46a1b34855048cde60f4);
+        
+    
+            var icon_9f2f7d95516b4097bc0bd66811356a3b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_8c1db2d936504e33945ec1bec6e33c2b.setIcon(icon_9f2f7d95516b4097bc0bd66811356a3b);
+        
+    
+        var popup_751638499a1246bba303ec4c3cd70f37 = L.popup({"maxWidth": 200});
+
+        
+            var html_28b03278801d47b2bc3def191a28e2ad = $(`<div id="html_28b03278801d47b2bc3def191a28e2ad" style="width: 100.0%; height: 100.0%;"><a href=https://gazzettadimodena.gelocal.it/modena/cronaca/2020/07/09/news/modena-incendio-di-masserizie-all-ex-corradini-1.39061586 target="_blank">Modena, incendio di masserizie all'ex Corradini</a><br>2020-07-09<br><b>theft</b></div>`)[0];
+            popup_751638499a1246bba303ec4c3cd70f37.setContent(html_28b03278801d47b2bc3def191a28e2ad);
+        
+
+        marker_8c1db2d936504e33945ec1bec6e33c2b.bindPopup(popup_751638499a1246bba303ec4c3cd70f37)
+        ;
+
+        
+    
+    
+            var marker_24d84f323d9f42a7b4d73eef90ead5ba = L.marker(
+                [44.7241419, 11.0396119],
+                {}
+            ).addTo(marker_cluster_19960c4c6f7f46a1b34855048cde60f4);
+        
+    
+            var icon_d134add0bcd9461d8cdcb0a11e161322 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_24d84f323d9f42a7b4d73eef90ead5ba.setIcon(icon_d134add0bcd9461d8cdcb0a11e161322);
+        
+    
+        var popup_2b7c15c4f01846f3a6ea8e98cb150333 = L.popup({"maxWidth": 200});
+
+        
+            var html_ccff2ba21bc54962a824879f925aacf5 = $(`<div id="html_ccff2ba21bc54962a824879f925aacf5" style="width: 100.0%; height: 100.0%;"><a href=http://www.modenatoday.it/cronaca/furto-spaccata-come-nelle-favole-bomporto-8-9-luglio-2020.html target="_blank">Bomporto, spaccata e razzia nel negozio "Come nelle Favole Wedding"</a><br>2020-07-09<br><b>theft</b></div>`)[0];
+            popup_2b7c15c4f01846f3a6ea8e98cb150333.setContent(html_ccff2ba21bc54962a824879f925aacf5);
+        
+
+        marker_24d84f323d9f42a7b4d73eef90ead5ba.bindPopup(popup_2b7c15c4f01846f3a6ea8e98cb150333)
+        ;
+
+        
+    
+    
+            var marker_f7e201551c0b49d39e52eb4f24e4e1ce = L.marker(
+                [44.7635996, 10.9012822],
+                {}
+            ).addTo(marker_cluster_19960c4c6f7f46a1b34855048cde60f4);
+        
+    
+            var icon_ea4f32f8f4e6430cad9519b433c5eeb8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_f7e201551c0b49d39e52eb4f24e4e1ce.setIcon(icon_ea4f32f8f4e6430cad9519b433c5eeb8);
+        
+    
+        var popup_8842014b50a54060ba26666dab9764fb = L.popup({"maxWidth": 200});
+
+        
+            var html_05c756274fc243edb88b11d05a1d4a2e = $(`<div id="html_05c756274fc243edb88b11d05a1d4a2e" style="width: 100.0%; height: 100.0%;"><a href=https://gazzettadimodena.gelocal.it/modena/cronaca/2020/07/09/news/modena-cordoli-e-banchine-caos-in-montecuccoli-1.39063665 target="_blank">Modena Cordoli e banchine, caos in Montecuccoli</a><br>2020-07-09<br><b>theft</b></div>`)[0];
+            popup_8842014b50a54060ba26666dab9764fb.setContent(html_05c756274fc243edb88b11d05a1d4a2e);
+        
+
+        marker_f7e201551c0b49d39e52eb4f24e4e1ce.bindPopup(popup_8842014b50a54060ba26666dab9764fb)
+        ;
+
+        
+    
+    
+            var marker_63f62373a3d04645952e54d1f8e604bb = L.marker(
+                [44.6517424, 10.9270126],
+                {}
+            ).addTo(marker_cluster_19960c4c6f7f46a1b34855048cde60f4);
+        
+    
+            var icon_6499b1e3ccc64e00870b3e0170147eb2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_63f62373a3d04645952e54d1f8e604bb.setIcon(icon_6499b1e3ccc64e00870b3e0170147eb2);
+        
+    
+        var popup_b23b8872deb1480e8e3cac1c5948466f = L.popup({"maxWidth": 200});
+
+        
+            var html_6d31b2db1bde41e8b3b5f025a67afa8e = $(`<div id="html_6d31b2db1bde41e8b3b5f025a67afa8e" style="width: 100.0%; height: 100.0%;"><a href=http://www.modenatoday.it/cronaca/rapina-barbiere-via-ganaceto-30-giugno-2020.html target="_blank">Aggredisce un barbiere per rapinarlo, arrestato dalla Volante in pieno centro</a><br>2020-07-01<br><b>robbery</b></div>`)[0];
+            popup_b23b8872deb1480e8e3cac1c5948466f.setContent(html_6d31b2db1bde41e8b3b5f025a67afa8e);
+        
+
+        marker_63f62373a3d04645952e54d1f8e604bb.bindPopup(popup_b23b8872deb1480e8e3cac1c5948466f)
+        ;
+
+        
+    
+    
+            var marker_69c7392b2a6d450197d3bfea3c01e302 = L.marker(
+                [44.7449079, 11.0047792],
+                {}
+            ).addTo(marker_cluster_19960c4c6f7f46a1b34855048cde60f4);
+        
+    
+            var icon_ad7ba3ed5db049198fd5d7d7f983a6bb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_69c7392b2a6d450197d3bfea3c01e302.setIcon(icon_ad7ba3ed5db049198fd5d7d7f983a6bb);
+        
+    
+        var popup_32269807bd7448e4b19687b1669b80f7 = L.popup({"maxWidth": 200});
+
+        
+            var html_0d1997672e3d4c61ab913e8f1e907cb3 = $(`<div id="html_0d1997672e3d4c61ab913e8f1e907cb3" style="width: 100.0%; height: 100.0%;"><a href=https://gazzettadimodena.gelocal.it/modena/cronaca/2020/07/01/news/ritrovato-scooter-rubato-usato-da-spacciatore-sotto-la-sella-c-e-la-droga-1.39033536 target="_blank">Ritrovato scooter rubato usato da spacciatore: sotto la sella c’è la droga</a><br>2020-07-01<br><b>theft</b></div>`)[0];
+            popup_32269807bd7448e4b19687b1669b80f7.setContent(html_0d1997672e3d4c61ab913e8f1e907cb3);
+        
+
+        marker_69c7392b2a6d450197d3bfea3c01e302.bindPopup(popup_32269807bd7448e4b19687b1669b80f7)
+        ;
+
+        
+    
+    
+            var marker_ddaecab95bca4f0188100abe6f5dd226 = L.marker(
+                [44.6494876, 10.9362768],
+                {}
+            ).addTo(marker_cluster_19960c4c6f7f46a1b34855048cde60f4);
+        
+    
+            var icon_f7b1d623714d487680e91a49fb53d4da = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_ddaecab95bca4f0188100abe6f5dd226.setIcon(icon_f7b1d623714d487680e91a49fb53d4da);
+        
+    
+        var popup_ad3fa82fbe1541128cf6e9e11e214d3e = L.popup({"maxWidth": 200});
+
+        
+            var html_6e8a1d68268d45dfbda3589652a2dacc = $(`<div id="html_6e8a1d68268d45dfbda3589652a2dacc" style="width: 100.0%; height: 100.0%;"><a href=http://www.modenatoday.it/cronaca/arresto-spacciatore-via-poletti-1-luglio-2020.html target="_blank">Marijuana nello zaino, richiedente asilo nuovamente in manette in zona Tempio</a><br>2020-07-02<br><b>drug dealing</b></div>`)[0];
+            popup_ad3fa82fbe1541128cf6e9e11e214d3e.setContent(html_6e8a1d68268d45dfbda3589652a2dacc);
+        
+
+        marker_ddaecab95bca4f0188100abe6f5dd226.bindPopup(popup_ad3fa82fbe1541128cf6e9e11e214d3e)
+        ;
+
+        
+    
+    
+            var marker_f72c3fa05ee34d2d86514d8f4c58dbb6 = L.marker(
+                [44.7861092, 10.8868523],
+                {}
+            ).addTo(marker_cluster_19960c4c6f7f46a1b34855048cde60f4);
+        
+    
+            var icon_c1790c4958854141ad49df27f5217719 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_f72c3fa05ee34d2d86514d8f4c58dbb6.setIcon(icon_c1790c4958854141ad49df27f5217719);
+        
+    
+        var popup_b23a634b810340be97c8e75d9a974422 = L.popup({"maxWidth": 200});
+
+        
+            var html_4e90f43ca3474d51bedba359686e8481 = $(`<div id="html_4e90f43ca3474d51bedba359686e8481" style="width: 100.0%; height: 100.0%;"><a href=https://gazzettadimodena.gelocal.it/modena/cronaca/2020/07/03/news/carpi-si-spara-in-una-mano-e-finge-una-rapina-denunciato-1.39039597 target="_blank">Carpi, si spara in una mano e finge una rapina: denunciato</a><br>2020-07-03<br><b>theft</b></div>`)[0];
+            popup_b23a634b810340be97c8e75d9a974422.setContent(html_4e90f43ca3474d51bedba359686e8481);
+        
+
+        marker_f72c3fa05ee34d2d86514d8f4c58dbb6.bindPopup(popup_b23a634b810340be97c8e75d9a974422)
+        ;
+
+        
+    
+    
+            var marker_a096d8c539e64783ba20eeb49faf2130 = L.marker(
+                [44.6248216, 10.9458359],
+                {}
+            ).addTo(marker_cluster_19960c4c6f7f46a1b34855048cde60f4);
+        
+    
+            var icon_146f717f45b34c3d8ae93c14e0f0d0cf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_a096d8c539e64783ba20eeb49faf2130.setIcon(icon_146f717f45b34c3d8ae93c14e0f0d0cf);
+        
+    
+        var popup_48cf6c59b90e47afa4929818f99ec083 = L.popup({"maxWidth": 200});
+
+        
+            var html_e9543f8be02d4b48b69ec3c5407b42f9 = $(`<div id="html_e9543f8be02d4b48b69ec3c5407b42f9" style="width: 100.0%; height: 100.0%;"><a href=https://gazzettadimodena.gelocal.it/modena/cronaca/2020/07/04/news/modena-urta-un-furgone-e-scappa-rintracciato-grazie-a-un-testimone-1.39043311 target="_blank">Modena, urta un furgone e scappa: rintracciato grazie a un testimone</a><br>2020-07-04<br><b>theft</b></div>`)[0];
+            popup_48cf6c59b90e47afa4929818f99ec083.setContent(html_e9543f8be02d4b48b69ec3c5407b42f9);
+        
+
+        marker_a096d8c539e64783ba20eeb49faf2130.bindPopup(popup_48cf6c59b90e47afa4929818f99ec083)
+        ;
+
+        
+    
+    
+            var marker_3c43886217634f4381f7c417bdd8cf9b = L.marker(
+                [44.6493472, 10.9365942],
+                {}
+            ).addTo(marker_cluster_19960c4c6f7f46a1b34855048cde60f4);
+        
+    
+            var icon_b6e21217482f41af8286ac2a54e8e615 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_3c43886217634f4381f7c417bdd8cf9b.setIcon(icon_b6e21217482f41af8286ac2a54e8e615);
+        
+    
+        var popup_14c938d5ccd041fcbda85656a1514e0d = L.popup({"maxWidth": 200});
+
+        
+            var html_37e9e3004dc04ff7bf1cbab52b9140b4 = $(`<div id="html_37e9e3004dc04ff7bf1cbab52b9140b4" style="width: 100.0%; height: 100.0%;"><a href=https://gazzettadimodena.gelocal.it/modena/cronaca/2020/07/03/news/spacciava-in-bicicletta-arrestato-un-23enne-1.39041654 target="_blank">Spacciava in bicicletta: arrestato un 23enne</a><br>2020-07-03<br><b>drug dealing</b></div>`)[0];
+            popup_14c938d5ccd041fcbda85656a1514e0d.setContent(html_37e9e3004dc04ff7bf1cbab52b9140b4);
+        
+
+        marker_3c43886217634f4381f7c417bdd8cf9b.bindPopup(popup_14c938d5ccd041fcbda85656a1514e0d)
+        ;
+
+        
+    
+    
+            var marker_baf58f7744ff489cb9be3f5da6797807 = L.marker(
+                [44.7861092, 10.8868523],
+                {}
+            ).addTo(marker_cluster_19960c4c6f7f46a1b34855048cde60f4);
+        
+    
+            var icon_4e26b42f484b495d8b044b51125d426f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_baf58f7744ff489cb9be3f5da6797807.setIcon(icon_4e26b42f484b495d8b044b51125d426f);
+        
+    
+        var popup_ab0f0b686953424dbcdf31b71e3958a9 = L.popup({"maxWidth": 200});
+
+        
+            var html_aeae422b55d343e784e7f716c9771278 = $(`<div id="html_aeae422b55d343e784e7f716c9771278" style="width: 100.0%; height: 100.0%;"><a href=https://gazzettadimodena.gelocal.it/modena/cronaca/2020/07/04/news/simula-rapina-dopo-lo-sparo-un-40enne-incastrato-1.39045660 target="_blank">Simula rapina dopo lo sparo Un 40enne incastrato</a><br>2020-07-04<br><b>theft</b></div>`)[0];
+            popup_ab0f0b686953424dbcdf31b71e3958a9.setContent(html_aeae422b55d343e784e7f716c9771278);
+        
+
+        marker_baf58f7744ff489cb9be3f5da6797807.bindPopup(popup_ab0f0b686953424dbcdf31b71e3958a9)
+        ;
+
+        
+    
+    
+            var marker_34d5b487835a4a1d8a3526119a3519cb = L.marker(
+                [44.723795, 11.1451911],
+                {}
+            ).addTo(marker_cluster_19960c4c6f7f46a1b34855048cde60f4);
+        
+    
+            var icon_4a682805bafb4596b8afc1c48b517641 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_34d5b487835a4a1d8a3526119a3519cb.setIcon(icon_4a682805bafb4596b8afc1c48b517641);
+        
+    
+        var popup_8562901eb85d4643bc2a771f5c1618c3 = L.popup({"maxWidth": 200});
+
+        
+            var html_6f49eb2fa36b41658b67b7f29aaa4e49 = $(`<div id="html_6f49eb2fa36b41658b67b7f29aaa4e49" style="width: 100.0%; height: 100.0%;"><a href=https://gazzettadimodena.gelocal.it/modena/cronaca/2020/07/04/news/il-caso-viale-gramsci-sempre-piu-controlli-nasce-punto-d-ascolto-1.39045634 target="_blank">Il caso viale Gramsci: sempre più controlli Nasce punto d’ascolto</a><br>2020-07-04<br><b>attack</b></div>`)[0];
+            popup_8562901eb85d4643bc2a771f5c1618c3.setContent(html_6f49eb2fa36b41658b67b7f29aaa4e49);
+        
+
+        marker_34d5b487835a4a1d8a3526119a3519cb.bindPopup(popup_8562901eb85d4643bc2a771f5c1618c3)
+        ;
+
+        
+    
+    
+            var marker_e61ee94ddf2f4509b50af733d15610f1 = L.marker(
+                [44.5242336, 10.8655053],
+                {}
+            ).addTo(marker_cluster_19960c4c6f7f46a1b34855048cde60f4);
+        
+    
+            var icon_2ce87018f71b41788b5824547b35b4f8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_e61ee94ddf2f4509b50af733d15610f1.setIcon(icon_2ce87018f71b41788b5824547b35b4f8);
+        
+    
+        var popup_964547fbbc1a4ad393c1b9951dcc333e = L.popup({"maxWidth": 200});
+
+        
+            var html_bc20e22d8b154313af329f3d2a84aa5d = $(`<div id="html_bc20e22d8b154313af329f3d2a84aa5d" style="width: 100.0%; height: 100.0%;"><a href=http://www.modenatoday.it/cronaca/arresto-tentata-rapina-maranello-3-luglio-2020.html target="_blank">Cercano di rapinare un passante a Maranello, fermata coppia di giovanissimi</a><br>2020-07-05<br><b>robbery</b></div>`)[0];
+            popup_964547fbbc1a4ad393c1b9951dcc333e.setContent(html_bc20e22d8b154313af329f3d2a84aa5d);
+        
+
+        marker_e61ee94ddf2f4509b50af733d15610f1.bindPopup(popup_964547fbbc1a4ad393c1b9951dcc333e)
+        ;
+
+        
+    
+    
+            var marker_9f82c7fa889643c7b26fd66dbe534946 = L.marker(
+                [44.5380959, 10.8118839],
+                {}
+            ).addTo(marker_cluster_19960c4c6f7f46a1b34855048cde60f4);
+        
+    
+            var icon_35c9996e583c473d8644d5a85e405855 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_9f82c7fa889643c7b26fd66dbe534946.setIcon(icon_35c9996e583c473d8644d5a85e405855);
+        
+    
+        var popup_08184edd94be40999e1cc7efa0d3aa4d = L.popup({"maxWidth": 200});
+
+        
+            var html_39c14d5deee3465ab6115028cb04639a = $(`<div id="html_39c14d5deee3465ab6115028cb04639a" style="width: 100.0%; height: 100.0%;"><a href=http://www.modenatoday.it/cronaca/spaccio-casa-ocupata-arresti-fiorano-3-luglio-2020.html target="_blank">Fiorano, occupano una casa abbandonata e la trasformano in base per lo spaccio</a><br>2020-07-04<br><b>drug dealing</b></div>`)[0];
+            popup_08184edd94be40999e1cc7efa0d3aa4d.setContent(html_39c14d5deee3465ab6115028cb04639a);
+        
+
+        marker_9f82c7fa889643c7b26fd66dbe534946.bindPopup(popup_08184edd94be40999e1cc7efa0d3aa4d)
+        ;
+
+        
+    
+    
+            var marker_c2cb82c99a8e405282b127bbaeaa261e = L.marker(
+                [44.2094454, 10.7934664],
+                {}
+            ).addTo(marker_cluster_19960c4c6f7f46a1b34855048cde60f4);
+        
+    
+            var icon_5e71eb87686a4d7dbfcf9f37b67190b9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_c2cb82c99a8e405282b127bbaeaa261e.setIcon(icon_5e71eb87686a4d7dbfcf9f37b67190b9);
+        
+    
+        var popup_1b1450c48afe46eebaca68890e866c7f = L.popup({"maxWidth": 200});
+
+        
+            var html_c385fd83ab0f419d837707e5de02219d = $(`<div id="html_c385fd83ab0f419d837707e5de02219d" style="width: 100.0%; height: 100.0%;"><a href=https://gazzettadimodena.gelocal.it/modena/cronaca/2020/07/11/news/modena-mette-il-tagliando-sosta-sul-parabrezza-e-viene-rapinato-del-rolex-da-una-donna-1.39070503 target="_blank">Modena, mette il tagliando sosta sul parabrezza e viene rapinato del rolex da una donna</a><br>2020-07-11<br><b>theft</b></div>`)[0];
+            popup_1b1450c48afe46eebaca68890e866c7f.setContent(html_c385fd83ab0f419d837707e5de02219d);
+        
+
+        marker_c2cb82c99a8e405282b127bbaeaa261e.bindPopup(popup_1b1450c48afe46eebaca68890e866c7f)
+        ;
+
+        
+    
+    
+            var marker_89bf326298884f998be383e5aad8ffe6 = L.marker(
+                [44.5385897, 10.7843562],
+                {}
+            ).addTo(marker_cluster_19960c4c6f7f46a1b34855048cde60f4);
+        
+    
+            var icon_996cbc761edc47e893e2de48b87596a9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_89bf326298884f998be383e5aad8ffe6.setIcon(icon_996cbc761edc47e893e2de48b87596a9);
+        
+    
+        var popup_ab54a2255fdb4e7f8d30c455631a5255 = L.popup({"maxWidth": 200});
+
+        
+            var html_d66663bf383b41c29d00ff950b533738 = $(`<div id="html_d66663bf383b41c29d00ff950b533738" style="width: 100.0%; height: 100.0%;"><a href=https://gazzettadimodena.gelocal.it/modena/cronaca/2020/07/06/news/modena-viale-gramsci-preso-l-aggressore-1.39050953 target="_blank">Modena, viale Gramsci: preso l'aggressore</a><br>2020-07-06<br><b>theft</b></div>`)[0];
+            popup_ab54a2255fdb4e7f8d30c455631a5255.setContent(html_d66663bf383b41c29d00ff950b533738);
+        
+
+        marker_89bf326298884f998be383e5aad8ffe6.bindPopup(popup_ab54a2255fdb4e7f8d30c455631a5255)
+        ;
+
+        
+    
+    
+            var marker_d029c2d6625a4456a283266cbb4c7f18 = L.marker(
+                [44.6022319, 11.0507088],
+                {}
+            ).addTo(marker_cluster_19960c4c6f7f46a1b34855048cde60f4);
+        
+    
+            var icon_58f0fe9b67814f9daddb96fd3143f9b8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_d029c2d6625a4456a283266cbb4c7f18.setIcon(icon_58f0fe9b67814f9daddb96fd3143f9b8);
+        
+    
+        var popup_357905061aba47d4baba6befafd3ae16 = L.popup({"maxWidth": 200});
+
+        
+            var html_f3c0b3f03a2c4140ac2eff7f6ca2ce73 = $(`<div id="html_f3c0b3f03a2c4140ac2eff7f6ca2ce73" style="width: 100.0%; height: 100.0%;"><a href=http://www.modenatoday.it/cronaca/forno-rumoroso-in-centro-storico-sequestrati-i-locali-per-produzione-11-luglio-2020.html target="_blank">Forno rumoroso in centro storico, sequestrati i locali per la produzione</a><br>2020-07-11<br><b>kidnapping</b></div>`)[0];
+            popup_357905061aba47d4baba6befafd3ae16.setContent(html_f3c0b3f03a2c4140ac2eff7f6ca2ce73);
+        
+
+        marker_d029c2d6625a4456a283266cbb4c7f18.bindPopup(popup_357905061aba47d4baba6befafd3ae16)
+        ;
+
+        
+    
+    
+            var marker_d716217f4dc54566954a354c5a396504 = L.marker(
+                [44.7806741, 11.0251453],
+                {}
+            ).addTo(marker_cluster_19960c4c6f7f46a1b34855048cde60f4);
+        
+    
+            var icon_59a496cd37f14c43983bd765365c991a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_d716217f4dc54566954a354c5a396504.setIcon(icon_59a496cd37f14c43983bd765365c991a);
+        
+    
+        var popup_5d90fa4641b14d64bc32ad69800b5dc0 = L.popup({"maxWidth": 200});
+
+        
+            var html_f3670c0a3ae340618d5e91a98e8f9798 = $(`<div id="html_f3670c0a3ae340618d5e91a98e8f9798" style="width: 100.0%; height: 100.0%;"><a href=https://gazzettadimodena.gelocal.it/modena/cronaca/2020/07/13/news/modena-quartiere-sacca-all-ex-civ-amp-civ-la-nuova-sede-conad-il-colosso-cooperativo-investira-su-modena-1.39076856 target="_blank">Modena Quartiere Sacca, all’ex Civ &amp; Civ la nuova sede Conad Il colosso cooperativo investirà su Modena</a><br>2020-07-13<br><b>theft</b></div>`)[0];
+            popup_5d90fa4641b14d64bc32ad69800b5dc0.setContent(html_f3670c0a3ae340618d5e91a98e8f9798);
+        
+
+        marker_d716217f4dc54566954a354c5a396504.bindPopup(popup_5d90fa4641b14d64bc32ad69800b5dc0)
+        ;
+
+        
+    
+    
+            var marker_b19b5ec4d9a84adb9ec1f12623b0a9a3 = L.marker(
+                [44.652896, 10.8634552],
+                {}
+            ).addTo(marker_cluster_19960c4c6f7f46a1b34855048cde60f4);
+        
+    
+            var icon_750125f41d2448ceb26c6093461095e6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_b19b5ec4d9a84adb9ec1f12623b0a9a3.setIcon(icon_750125f41d2448ceb26c6093461095e6);
+        
+    
+        var popup_40056f1bc6fd4faf844ccabab0a4a35e = L.popup({"maxWidth": 200});
+
+        
+            var html_0afa7154f01a4982866ecb85e71350b5 = $(`<div id="html_0afa7154f01a4982866ecb85e71350b5" style="width: 100.0%; height: 100.0%;"><a href=http://www.modenatoday.it/cronaca/arresto-droga-a1-modena-13-luglio-2020.html target="_blank">Viaggia con la figlia e 32 kg di marijuana in auto, arrestato in A1</a><br>2020-07-14<br><b>drug dealing</b></div>`)[0];
+            popup_40056f1bc6fd4faf844ccabab0a4a35e.setContent(html_0afa7154f01a4982866ecb85e71350b5);
+        
+
+        marker_b19b5ec4d9a84adb9ec1f12623b0a9a3.bindPopup(popup_40056f1bc6fd4faf844ccabab0a4a35e)
+        ;
+
+        
+    
+</script>

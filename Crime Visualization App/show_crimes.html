@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Crimes Map</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+</head>
+
+<body onload="selected();">
+    {% set y=escape(year) %}
+    {% set m=escape(month) %}
+	{% autoescape None %}
+
+	<script>
+		function selectElement(id, valueToSelect) {    
+			document.getElementById(id).value = valueToSelect;
+		}
+		
+		function selected(){
+    		selectElement('month', '{{ m }}');
+    		selectElement('year', '{{ y }}');
+		}
+		
+		function selectChange(){
+			var e1 = document.getElementById("month");
+			var selected_month = e1.options[e1.selectedIndex].value;
+			var e2 = document.getElementById("year");
+			var selected_year = e2.options[e2.selectedIndex].value;
+			window.location.href = '/crimemap?request=GetCrimesMonthYear&month='+selected_month+'&year='+selected_year;
+		}
+	</script>
+  
+
+	<nav class="navbar navbar-expand-md navbar-dark" style="background-color:#000000">
+		<div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+			<a class="navbar-brand mx-auto" href="/crimemap?request=GetCrimes">CRIME MAP</a>
+		</div>
+	</nav>
+
+	<div style="width: 100%;">
+		<center>
+			<form name="GetCrimesMonthYear" action="/crimemap?request=GetCrimesMonthYear" method="get">
+				<h4>The map and the line below are related to the crimes occurred in <b>{{m}} {{y}}</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				
+				<select name="month" id="month" onchange="selectChangeMonth();">
+					<option value="January">January</option>
+					<option value="February">February</option>
+					<option value="March">March</option>
+					<option value="April">April</option>
+					<option value="May">May</option>
+					<option value="June">June</option>
+					<option value="July">July</option>
+					<option value="August">August</option>
+					<option value="September">September</option>
+					<option value="October">October</option>
+					<option value="November">November</option>
+					<option value="December">December</option>
+				</select>
+	
+				<select name="year" id="year" onchange="selectChangeYear();">
+					<option value="2011">2011</option>
+					<option value="2012">2012</option>
+					<option value="2013">2013</option>
+					<option value="2014">2014</option>
+					<option value="2015">2015</option>
+					<option value="2016">2016</option>
+					<option value="2017">2017</option>
+					<option value="2018">2018</option>
+					<option value="2019">2019</option>
+					<option value="2020">2020</option>
+				</select>
+				<a class="btn btn-primary" onClick="selectChange();">Refresh</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				
+				<b>{{ count_crimes }}</b> results</h4>
+			</form>
+			
+		</center>
+
+		<svg style="width: 100%!important; height: 30px">
+			<g></g>
+		</svg>
+		<center><h5><svg width="20" height="15"><rect width="15" height="15" style="fill:#A93226;" /></svg>theft&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<svg width="20" height="15"><rect width="15" height="15" style="fill:#A569BD;" /></svg>fraud&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<svg width="20" height="15"><rect width="15" height="15" style="fill:#2980B9;" /></svg>kidnapping&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<svg width="20" height="15"><rect width="15" height="15" style="fill:#117864;" /></svg>attack&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<svg width="20" height="15"><rect width="15" height="15" style="fill:#52BE80;" /></svg>evasion&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<svg width="20" height="15"><rect width="15" height="15" style="fill:#EC7063;" /></svg>drug dealing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<svg width="20" height="15"><rect width="15" height="15" style="fill:#F5B041;" /></svg>murder&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<svg width="20" height="15"><rect width="15" height="15" style="fill:#DC7633;" /></svg>abuse&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<svg width="20" height="15"><rect width="15" height="15" style="fill:#2E4053;" /></svg>robbery&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<svg width="20" height="15"><rect width="15" height="15" style="fill:#82E0AA;" /></svg>sexual violence&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<svg width="20" height="15"><rect width="15" height="15" style="fill:#85929E;" /></svg>money laundering</h5></center>
+	</div>
+			<div style="width: 100%; margin: 0 auto">
+				{% include "map.html" %}
+			</div>
+	
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
+
+    <script>
+		var colors = {'theft': '#A93226', 'fraud': '#A569BD', 'kidnapping': '#2980B9', 'attack': '#117864', 'evasion': '#52BE80', 'drug dealing': '#EC7063', 'murder': '#F5B041', 'abuse': '#DC7633', 'robbery': '#2E4053', 'sexual violence': '#82E0AA', 'money laundering': '#85929E'};
+        //var colors = ['#191970', '#001CF0', '#0038E2', '#0055D4', '#0071C6', '#008DB8', '#00AAAA', '#00C69C', '#00E28E', '#00FF80', '#75fab8'];
+        var stack = d3.stack()
+          .keys({{ keys }})
+		  .order(d3.stackOrderDescending);;
+        
+        var stackedSeries = stack({{ values }});
+		
+        // Create a g element for each series
+        var g = d3.select('g')
+        	.selectAll('g.series')
+        	.data(stackedSeries)
+        	.enter()
+        	.append('g')
+        	.classed('series', true)
+        	.style('fill', function(d, i) {
+        		return colors[d.key];
+        	});
+		// document.documentElement.clientWidth
+        // For each series create a rect element for each day
+		g.selectAll('rect')
+        	.data(function(d) {
+        		return d;
+        	})
+        	.enter()
+        	.append('rect')
+        	.attr('width', function(d) {
+				return Math.round(((d[1] - d[0])*window.innerWidth)/{{ sum }});
+			})
+        	.attr('x', function(d) {
+        		return Math.round((d[0]*window.innerWidth)/{{ sum }});
+        	})
+        	.attr('y', function(d, i) {
+        		return i * 20;
+        	})
+        	.attr('height', 30);
+
+    </script>
+</body>
+</html>
