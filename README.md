@@ -1,7 +1,7 @@
 # Crime-event-localization-and-deduplication
-This repository contains the source code of two Java applications: 
-1. the Crime Ingestion App aims at extracting, geolocalizing and deduplicating crime-related news articles from two online newspapers (ModenaToday https://www.modenatoday.it/ and Gazzetta di Modena https://gazzettadimodena.gelocal.it/modena), then information is stored in a PostgreSQL database,
-2. the Crime Visualization App allows visualizing crime-related data in a web application (online version is available at https://dbgroup.ing.unimore.it/crimemap).
+This repository contains the source code of two applications: 
+1. the Crime Ingestion App is a Java applications and aims at extracting, geolocalizing and deduplicating crime-related news articles from two online newspapers of the province of Modena in Italy (ModenaToday https://www.modenatoday.it/ and Gazzetta di Modena https://gazzettadimodena.gelocal.it/modena), the information extracted by the application is stored in a PostgreSQL database,
+2. the Crime Visualization App is a Python application and allows visualizing in a web application the crime-related data stored in the PostgreSQ database (online version is available at the link https://dbgroup.ing.unimore.it/crimemap).
 
 <img src="https://github.com/federicarollo/Crime-event-localization-and-deduplication/blob/master/Crime%20Visualization%20App/screen.png" width="100%" height="100%" />
 
@@ -20,6 +20,9 @@ Python 3.5
 ## How to run the Crime Ingestion App
 
 ### Windows
-Create the database on your machine.
+After installing PostgreSQl on your machine, create the database by using the <a href="https://github.com/federicarollo/Crime-event-localization-and-deduplication/blob/master/crimedb.sql">crimedb.sql</a> file.
 
-Then, install Eclipse (https://www.eclipse.org/downloads/) and import the <a href="https://github.com/federicarollo/Crime-event-localization-and-deduplication/tree/master/Crime%20Ingestion%20App">Crime Ingestion App project</a>. Modify the config.json file with the configuration parameters to connect to your database.
+Then, install Eclipse (https://www.eclipse.org/downloads/) and import the <a href="https://github.com/federicarollo/Crime-event-localization-and-deduplication/tree/master/Crime%20Ingestion%20App">Crime Ingestion App project</a> as a new Java project.
+Modify the config.json file with the configuration parameters to connect to your database.
+Run the pom.xml file to generate the tint library.
+Configure the build path adding the libraries you can find in the folder called lib.
