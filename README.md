@@ -11,5 +11,6 @@ The file "crimedb.sql" contains the structure of the PostgreSQL database in whic
 
 ## Requirements
 Java (JDK 8+)
+
 PostgreSQL 9.6
 
