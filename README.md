@@ -14,7 +14,7 @@ Java (JDK 8+)
 
 PostgreSQL 9.6
 
-Python 3.6
+Python 3.5
 
 
 ## How to run the Crime Ingestion App
