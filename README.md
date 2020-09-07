@@ -14,3 +14,12 @@ Java (JDK 8+)
 
 PostgreSQL 9.6
 
+Python 3.6
+
+
+## How to run the Crime Ingestion App
+
+### Windows
+Create the database on your machine.
+
+Then, install Eclipse (https://www.eclipse.org/downloads/) and import the <a href="https://github.com/federicarollo/Crime-event-localization-and-deduplication/tree/master/Crime%20Ingestion%20App">Crime Ingestion App project</a>. Modify the config.json file with the configuration parameters to connect to your database.
