@@ -20,7 +20,7 @@ Python 3.5
 ## How to run the Crime Ingestion App
 
 ### Windows
-After installing PostgreSQl on your machine, create the database by using the <a href="https://github.com/federicarollo/Crime-event-localization-and-deduplication/blob/master/crimedb.sql">crimedb.sql</a> file.
+After installing PostgreSQL on your machine, create the database by using the <a href="https://github.com/federicarollo/Crime-event-localization-and-deduplication/blob/master/crimedb.sql">crimedb.sql</a> file.
 
 
 Then, install Eclipse (https://www.eclipse.org/downloads/) and import the <a href="https://github.com/federicarollo/Crime-event-localization-and-deduplication/tree/master/Crime%20Ingestion%20App">Crime Ingestion App project</a> as a new Java project.
