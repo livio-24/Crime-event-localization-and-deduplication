@@ -29,4 +29,4 @@ Modify the config.json file with the configuration parameters to connect to your
 
 Run the pom.xml file to generate the tint library.
 
-Configure the build path adding the libraries you can find in the folder called lib.
+Configure the build path by adding all the libraries you can find in the folder called lib as explained at <a href="https://www.tutorialspoint.com/eclipse/eclipse_java_build_path.htm">this link</a>.
