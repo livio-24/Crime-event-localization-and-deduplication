@@ -57,3 +57,11 @@ java Main</pre></div>
 Then, run the application with the command:
 <div class="highlight highlight-source-shell"><pre>
 bash main.sh</pre></div>
+
+
+## How to run the Crime Visualization App
+Download the <a href="https://github.com/federicarollo/Crime-event-localization-and-deduplication/tree/master/Crime%20Visualization%20App">Crime Visualization App folder</a>.
+
+Modify the crime_visualization_app.py file inserting the credentials to access to your database:
+
+<div class="highlight highlight-source-shell"><pre>connection_string="dbname='crime_news' user='************' host='localhost' port=5432 password='***************'"</pre></div>
