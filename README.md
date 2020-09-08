@@ -34,6 +34,6 @@ Configure the build path by adding all the libraries you can find in the folder 
 
 Run the application!
 
-The database will be populated with the information extracted.
+The database will be populated with the information extracted from the online newspapers (the urls of the web pages are listed in the files modenatoday.json and gazzettadimodena.json).
 
 ### Linux
