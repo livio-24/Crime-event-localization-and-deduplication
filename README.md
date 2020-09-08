@@ -10,6 +10,9 @@ The <a href="https://github.com/federicarollo/Crime-event-localization-and-dedup
 
 <img src="https://github.com/federicarollo/Crime-event-localization-and-deduplication/blob/master/crimedb.png" width="70%" height="70%" />
 
+
+## Crime Ingestion App
+
 ## Requirements
 Java (JDK 8+)
 
@@ -17,10 +20,7 @@ PostgreSQL 9.6
 
 Python 3.5
 
-
-## How to run the Crime Ingestion App
-
-### Windows
+#### Windows
 After installing PostgreSQL on your machine, create the database by using the <a href="https://github.com/federicarollo/Crime-event-localization-and-deduplication/blob/master/crimedb.sql">crimedb.sql</a> file.
 
 
