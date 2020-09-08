@@ -18,8 +18,6 @@ Java (JDK 8+)
 
 PostgreSQL 9.6
 
-Python 3.5
-
 ### How to run the application
 
 #### Windows
@@ -61,6 +59,11 @@ Then, run the application with the command:
 bash main.sh</pre></div>
 
 ## Crime Visualization App
+
+### Requirements
+PostgreSQL 9.6
+
+Python 3.5
 
 ### How to run the application
 Download the <a href="https://github.com/federicarollo/Crime-event-localization-and-deduplication/tree/master/Crime%20Visualization%20App">Crime Visualization App folder</a>.
