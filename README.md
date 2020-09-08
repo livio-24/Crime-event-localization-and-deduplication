@@ -65,3 +65,5 @@ Download the <a href="https://github.com/federicarollo/Crime-event-localization-
 Modify the crime_visualization_app.py file inserting the credentials to access to your database:
 
 <div class="highlight highlight-source-shell"><pre>connection_string="dbname='crime_news' user='************' host='localhost' port=5432 password='***************'"</pre></div>
+
+Open http://localhost:9018/crimemap?request=GetCrimes on your browser and visualize the crimes!
