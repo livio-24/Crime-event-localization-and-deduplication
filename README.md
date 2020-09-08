@@ -37,3 +37,16 @@ Run the application!
 The database will be populated with the information extracted from the online newspapers (the urls of the web pages are listed in the files modenatoday.json and gazzettadimodena.json with the types of crime of the news published on the newspaper).
 
 ### Linux
+After downloading the <a href="https://github.com/federicarollo/Crime-event-localization-and-deduplication/tree/master/Crime%20Ingestion%20App">Crime Ingestion App folder</a>, create a .sh file with the following commands:
+
+<div class="highlight highlight-source-shell"><pre>#!/bin/bash
+
+export CLASSPATH=""
+b="/path to the folder/Crime Ingestion App"
+cd "/path to the folder/"
+for i in $b/bin $b/lib/*.jar
+do
+  export CLASSPATH=$CLASSPATH:$i
+done
+echo $CLASSPATH
+java Main</pre></div>
