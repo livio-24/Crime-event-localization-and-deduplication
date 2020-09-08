@@ -51,8 +51,7 @@ for i in $b/bin $b/lib/*.jar
 do
 &nbsp;&nbsp;&nbsp;&nbsp;export CLASSPATH=$CLASSPATH:$i
 done
-echo $CLASSPATH
-
+echo $CLASSPATH<br>
 java Main</pre></div>
 
 Then, run the application with the command:
