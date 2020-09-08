@@ -62,8 +62,11 @@ bash main.sh</pre></div>
 ## How to run the Crime Visualization App
 Download the <a href="https://github.com/federicarollo/Crime-event-localization-and-deduplication/tree/master/Crime%20Visualization%20App">Crime Visualization App folder</a>.
 
-Modify the crime_visualization_app.py file inserting the credentials to access to your database:
+Modify the crime_visualization_app.py file adding the credentials to access to your database:
 
 <div class="highlight highlight-source-shell"><pre>connection_string="dbname='crime_news' user='************' host='localhost' port=5432 password='***************'"</pre></div>
 
+Run the command:
+
+<div class="highlight highlight-source-shell"><pre>python crime_visualization_app.py</pre></div>
 Open http://localhost:9018/crimemap?request=GetCrimes on your browser and visualize the crimes!
