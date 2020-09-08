@@ -37,6 +37,8 @@ Run the application!
 The database will be populated with the information extracted from the online newspapers (the urls of the web pages are listed in the files modenatoday.json and gazzettadimodena.json with the types of crime of the news published on the newspaper).
 
 ### Linux
+After installing PostgreSQL on your machine, create the database by using the <a href="https://github.com/federicarollo/Crime-event-localization-and-deduplication/blob/master/crimedb.sql">crimedb.sql</a> file.
+
 After downloading the <a href="https://github.com/federicarollo/Crime-event-localization-and-deduplication/tree/master/Crime%20Ingestion%20App">Crime Ingestion App folder</a>, create the main.sh file with the following commands:
 
 <div class="highlight highlight-source-shell"><pre>
@@ -50,8 +52,9 @@ do
 &nbsp;&nbsp;&nbsp;&nbsp;export CLASSPATH=$CLASSPATH:$i
 done
 echo $CLASSPATH
+
 java Main</pre></div>
 
-Run the application with the command:
+Then, run the application with the command:
 <div class="highlight highlight-source-shell"><pre>
 bash main.sh</pre></div>
