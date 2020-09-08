@@ -8,7 +8,7 @@ This repository contains the source code of two applications:
 
 The <a href="https://github.com/federicarollo/Crime-event-localization-and-deduplication/blob/master/crimedb.sql">crimedb.sql</a> file contains the structure of the PostgreSQL database in which the data of the news articles are stored (the database has to be created before running the Crime Ingestion App).
 
-<img src="https://github.com/federicarollo/Crime-event-localization-and-deduplication/blob/master/crimedb.png" width="100%" height="100%" />
+<img src="https://github.com/federicarollo/Crime-event-localization-and-deduplication/blob/master/crimedb.png" width="70%" height="70%" />
 
 ## Requirements
 Java (JDK 8+)
