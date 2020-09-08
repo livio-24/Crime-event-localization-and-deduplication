@@ -46,7 +46,7 @@ b="/path to the folder/Crime Ingestion App"
 cd "/path to the folder/"
 for i in $b/bin $b/lib/*.jar
 do
-  export CLASSPATH=$CLASSPATH:$i
+&nbsp;&nbsp;&nbsp;&nbsp;export CLASSPATH=$CLASSPATH:$i
 done
 echo $CLASSPATH
 java Main</pre></div>
