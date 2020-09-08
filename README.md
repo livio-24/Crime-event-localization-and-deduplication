@@ -18,6 +18,9 @@ Java (JDK 8+)
 
 PostgreSQL 9.6
 
+PostGIS 2.3
+
+
 ### How to run the application
 
 #### Windows
@@ -62,6 +65,8 @@ bash main.sh</pre></div>
 
 ### Requirements
 PostgreSQL 9.6
+
+PostGIS 2.3
 
 Python 3.5
 
