@@ -1,6 +1,6 @@
 # Crime event localization and deduplication
 This repository contains the source code of two applications: 
-1. the Crime Ingestion App is a Java applications and aims at extracting, geolocalizing and deduplicating crime-related news articles from two online newspapers of the province of Modena in Italy (ModenaToday https://www.modenatoday.it/ and Gazzetta di Modena https://gazzettadimodena.gelocal.it/modena), the information extracted by the application is stored in a PostgreSQL database,
+1. the Crime Ingestion App is a Java application and aims at extracting, geolocalizing and deduplicating crime-related news articles from two online newspapers of the province of Modena in Italy (ModenaToday https://www.modenatoday.it/ and Gazzetta di Modena https://gazzettadimodena.gelocal.it/modena), the information extracted by the application is stored in a PostgreSQL database,
 2. the Crime Visualization App is a Python application and allows visualizing in a web application the crime-related data stored in the PostgreSQL database (online version is available at the link https://dbgroup.ing.unimore.it/crimemap).
 
 <img src="https://github.com/federicarollo/Crime-event-localization-and-deduplication/blob/master/Crime%20Visualization%20App/screen.png" width="100%" height="100%" />
