@@ -30,12 +30,13 @@ PostGIS 2.3
 #### Windows
 After installing PostgreSQL on your machine, create the database by using the <a href="https://github.com/federicarollo/Crime-event-localization-and-deduplication/blob/master/crimedb.sql">crimedb.sql</a> file.
 
-Then, download the <a href="https://github.com/federicarollo/Crime-event-localization-and-deduplication/tree/master/Crime%20Ingestion%20App">Crime Ingestion App folder</a>.
-Modify the config.json file with the configuration parameters to connect to your database.
-Run the following command on the terminal:
+Then, download the <a href="https://github.com/federicarollo/Crime-event-localization-and-deduplication/tree/master/Crime%20Ingestion%20App">Crime Ingestion App folder</a> and modify the config.json file with the configuration parameters to connect to your database.
 
-<div class="highlight highlight-source-shell"><pre>mvn clean package
-xcopy configuration target
+Run the following commands on the terminal:
+
+<div class="highlight highlight-source-shell"><pre>
+mvn clean package
+xcopy configuration target /s /e
 cd target
 java -jar Crime_Ingestion_App-1.0.0.jar
 </pre></div>
