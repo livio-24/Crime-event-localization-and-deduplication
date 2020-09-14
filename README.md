@@ -94,6 +94,10 @@ Modify the crime_visualization_app.py file adding the credentials to access to y
 
 <div class="highlight highlight-source-shell"><pre>connection_string="dbname='crime_news' user='************' host='localhost' port=5432 password='***************'"</pre></div>
 
+Install the requirements with the command:
+
+<div class="highlight highlight-source-shell"><pre>pip install -r requirements.txt</pre></div>
+
 Run the command:
 
 <div class="highlight highlight-source-shell"><pre>python crime_visualization_app.py</pre></div>
