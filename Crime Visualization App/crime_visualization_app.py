@@ -23,7 +23,7 @@ import tornado.options
 from tornado.options import define, options
 
 
-connection_string="dbname='crime_news' user='************' host='localhost' port=5432 password='***************'"
+connection_string="dbname='postgres' user='************' host='localhost' port=5432 password='***************'"
 conn = psycopg2.connect(connection_string)
 cur=conn.cursor()
 
