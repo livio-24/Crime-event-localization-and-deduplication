@@ -30,18 +30,15 @@ PostGIS 2.3
 #### Windows
 After installing PostgreSQL on your machine, create the database by using the <a href="https://github.com/federicarollo/Crime-event-localization-and-deduplication/blob/master/crimedb.sql">crimedb.sql</a> file.
 
-
-Then, download the <a href="https://github.com/federicarollo/Crime-event-localization-and-deduplication/tree/master/Crime%20Ingestion%20App">Crime Ingestion App folder</a> and unzip the tagger folder.
-
-Install Eclipse (https://www.eclipse.org/downloads/) and import the folder with the application as a new Java project.
-
+Then, download the <a href="https://github.com/federicarollo/Crime-event-localization-and-deduplication/tree/master/Crime%20Ingestion%20App">Crime Ingestion App folder</a>.
 Modify the config.json file with the configuration parameters to connect to your database.
+Run the following command on the terminal:
 
-Build the pom.xml file with Maven to generate the tint library (in Eclipse right-click on the pom.xml file, click Run As, then Maven Build).
-
-Configure the build path by adding all the libraries you can find in the folder called lib, as explained at <a href="https://www.tutorialspoint.com/eclipse/eclipse_java_build_path.htm">this link</a>.
-
-Run the application!
+<div class="highlight highlight-source-shell"><pre>mvn clean package
+xcopy configuration target
+cd target
+java -jar Crime_Ingestion_App-1.0.0.jar
+</pre></div>
 
 The database will be populated with the information extracted from the online newspapers (the urls of the web pages are listed in the files modenatoday.json and gazzettadimodena.json with the types of crime of the news published on the newspaper).
 
