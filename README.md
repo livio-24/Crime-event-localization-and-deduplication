@@ -65,7 +65,7 @@ Then, create the main.sh file with the following commands:
 #!/bin/bash
 
 export CLASSPATH=""
-b="/path to the folder/Crime Ingestion App"
+b="/path to the folder/target"
 cd "/path to the folder/"
 for i in $b/bin $b/lib/*.jar
 do
