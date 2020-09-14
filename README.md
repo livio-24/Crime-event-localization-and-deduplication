@@ -32,6 +32,8 @@ After installing PostgreSQL on your machine, create the database by using the <a
 
 Then, download the <a href="https://github.com/federicarollo/Crime-event-localization-and-deduplication/tree/master/Crime%20Ingestion%20App">Crime Ingestion App folder</a> and modify the config.json file with the configuration parameters to connect to your database.
 
+In the config.json file 
+
 Run the following commands on the terminal:
 
 <div class="highlight highlight-source-shell"><pre>
@@ -41,12 +43,23 @@ cd target
 java -jar Crime_Ingestion_App-1.0.0.jar
 </pre></div>
 
-The database will be populated with the information extracted from the online newspapers (the urls of the web pages are listed in the files modenatoday.json and gazzettadimodena.json with the types of crime of the news published on the newspaper).
+After the last command, the database will be populated with the information extracted from the online newspapers (the urls of the web pages are listed in the files modenatoday.json and gazzettadimodena.json with the type of crime of the news articles published on that newspaper).
+
 
 #### Linux
 After installing PostgreSQL on your machine, create the database by using the <a href="https://github.com/federicarollo/Crime-event-localization-and-deduplication/blob/master/crimedb.sql">crimedb.sql</a> file.
 
-After downloading the <a href="https://github.com/federicarollo/Crime-event-localization-and-deduplication/tree/master/Crime%20Ingestion%20App">Crime Ingestion App folder</a>, create the main.sh file with the following commands:
+After downloading the <a href="https://github.com/federicarollo/Crime-event-localization-and-deduplication/tree/master/Crime%20Ingestion%20App">Crime Ingestion App folder</a>, run the commands:
+
+<div class="highlight highlight-source-shell"><pre>
+mvn clean package
+cp -R configuration target
+cd target
+java -jar Crime_Ingestion_App-1.0.0.jar
+</pre></div>
+
+
+Then, create the main.sh file with the following commands:
 
 <div class="highlight highlight-source-shell"><pre>
 #!/bin/bash
