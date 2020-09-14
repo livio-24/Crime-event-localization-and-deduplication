@@ -12,7 +12,7 @@ The <a href="https://github.com/federicarollo/Crime-event-localization-and-dedup
 
 
 The two applications have been executed on a Microsoft Windows 10 Pro computer with Intel i7 and 16GB RAM.
-However, in the following the instructions to execute the applications on both Windows and Unix are detailed.
+However, in the following, the instructions to execute the applications on both Windows and Unix are listed.
 
 
 ## Crime Ingestion App
