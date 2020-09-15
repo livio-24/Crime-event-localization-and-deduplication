@@ -5,7 +5,9 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Properties;
 
-import org.apache.http.HttpException;
+import javax.naming.ServiceUnavailableException;
+import org.apache.jena.atlas.web.HttpException;
+import org.apache.jena.sparql.engine.http.QueryExceptionHTTP;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -66,9 +68,14 @@ public class Main {
         try {
 			SPARQLHandler sparql = new SPARQLHandler();
 			sparql.findGeomWithSPARQL();
-		} catch (HttpException e){
-			System.out.println(e);
+		} catch (HttpException e1){
+			System.out.println("linkedgeodata/sparql service not available");
+		} catch (ServiceUnavailableException e2){
+			System.out.println("linkedgeodata/sparql service not available");
+		} catch (QueryExceptionHTTP e3){
+			System.out.println("linkedgeodata/sparql service not available");
 		}
+		
 		// Searching duplicates
 		System.out.println("---------------------------------------------------------------------");
 		System.out.println("Duplicate detection");
