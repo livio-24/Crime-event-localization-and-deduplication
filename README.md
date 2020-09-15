@@ -32,7 +32,7 @@ After installing PostgreSQL on your machine, create the database by using the <a
 
 Then, download the <a href="https://github.com/federicarollo/Crime-event-localization-and-deduplication/tree/master/Crime%20Ingestion%20App">Crime Ingestion App folder</a> and modify the config.json file with the configuration parameters to connect to your database.
 
-In the config.json file 
+Unzip the tagger.zip file in the configuration folder.
 
 Run the following commands on the terminal:
 
@@ -49,7 +49,8 @@ After the last command, the database will be populated with the information extr
 #### Linux
 After installing PostgreSQL on your machine, create the database by using the <a href="https://github.com/federicarollo/Crime-event-localization-and-deduplication/blob/master/crimedb.sql">crimedb.sql</a> file.
 
-After downloading the <a href="https://github.com/federicarollo/Crime-event-localization-and-deduplication/tree/master/Crime%20Ingestion%20App">Crime Ingestion App folder</a>, run the commands:
+After downloading the <a href="https://github.com/federicarollo/Crime-event-localization-and-deduplication/tree/master/Crime%20Ingestion%20App">Crime Ingestion App folder</a>, 
+modify the config.json file with the configuration parameters to connect to your database, unzip the tagger.zip file in the configuration folder. and run the commands:
 
 <div class="highlight highlight-source-shell"><pre>
 mvn clean package
