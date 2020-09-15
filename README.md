@@ -31,7 +31,8 @@ After installing PostgreSQL on your machine, create the database by using the <a
 
 Then, download the <a href="https://github.com/federicarollo/Crime-event-localization-and-deduplication/tree/master/Crime%20Ingestion%20App">Crime Ingestion App folder</a> and modify the config.json file in the configuration folder with the configuration parameters to connect to your database.
 
-In the config.json file, the "num_of_pages" parameter represents the number of web pages of each online newspaper that will be queried to download the news articles
+In the config.json file, the "num_of_pages" parameter represents the number of web pages of each online newspaper that will be queried to download the news articles.
+If this number is equal to 1, only the news articles in the first web page of each newspaper (the most recent news articles) will be downloaded.
 
 Unzip the tagger.zip file in the configuration folder.
 
