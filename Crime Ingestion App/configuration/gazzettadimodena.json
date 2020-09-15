@@ -1,0 +1,18 @@
+{
+    "urls": [
+		{ "url": "https://gazzettadimodena.gelocal.it/ricerca?query=furto&page=", "crime-type": "furto" },
+		{ "url": "https://gazzettadimodena.gelocal.it/ricerca?query=droga&page=", "crime-type": "droga" },
+		{ "url": "https://gazzettadimodena.gelocal.it/ricerca?query=maltrattamenti&page=", "crime-type": "maltrattamento" },
+		{ "url": "https://gazzettadimodena.gelocal.it/ricerca?query=aggressione&page=", "crime-type": "aggressione" },
+		{ "url": "https://gazzettadimodena.gelocal.it/ricerca?query=aggressioni&page=", "crime-type": "aggressione" },
+		{ "url": "https://gazzettadimodena.gelocal.it/ricerca?query=spaccio&page=", "crime-type": "spaccio" },
+		{ "url": "https://gazzettadimodena.gelocal.it/ricerca?query=riciclaggio&page=", "crime-type": "riciclaggio" },
+		{ "url": "https://gazzettadimodena.gelocal.it/ricerca?query=frodi&page=", "crime-type": "frode" },
+		{ "url": "https://gazzettadimodena.gelocal.it/ricerca?query=rapine&page=", "crime-type": "rapina" },
+		{ "url": "https://gazzettadimodena.gelocal.it/ricerca?query=truffe&page=", "crime-type": "truffa" },
+		{ "url": "https://gazzettadimodena.gelocal.it/ricerca?query=sequestri&page=", "crime-type": "sequestro" },
+		{ "url": "https://gazzettadimodena.gelocal.it/ricerca?query=evasione&page=", "crime-type": "evasione" },
+		{ "url": "https://gazzettadimodena.gelocal.it/ricerca?query=violenza-sessuale&page=", "crime-type": "violenza sessuale" },
+		{ "url": "https://gazzettadimodena.gelocal.it/ricerca?query=omicidi&page=", "crime-type": "omicidio" }
+	]
+}

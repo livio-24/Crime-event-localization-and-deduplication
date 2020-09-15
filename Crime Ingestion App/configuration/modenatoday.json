@@ -1,0 +1,24 @@
+{
+    "urls": [
+		{ "url": "https://www.modenatoday.it/tag/furti/pag/", "crime-type": "furto" },
+		{ "url": "https://www.modenatoday.it/tag/furto/pag/", "crime-type": "furto" },
+		{ "url": "https://www.modenatoday.it/tag/droga/pag/", "crime-type": "droga" },
+		{ "url": "https://www.modenatoday.it/tag/aggressione/pag/", "crime-type": "aggressione" },
+		{ "url": "https://www.modenatoday.it/tag/maltrattamenti/pag/", "crime-type": "maltrattamento" },
+		{ "url": "https://www.modenatoday.it/tag/maltrattamento/pag/", "crime-type": "maltrattamento" },
+		{ "url": "https://www.modenatoday.it/tag/aggressioni/pag/", "crime-type": "aggressione" },
+		{ "url": "https://www.modenatoday.it/tag/sequestri/pag/", "crime-type": "sequestro" },
+		{ "url": "https://www.modenatoday.it/tag/evasione/pag/", "crime-type": "evasione" },
+		{ "url": "https://www.modenatoday.it/tag/evasioni/pag/", "crime-type": "evasione" },
+		{ "url": "https://www.modenatoday.it/tag/violenza-sessuale/pag/", "crime-type": "violenza sessuale" },
+		{ "url": "https://www.modenatoday.it/tag/omicidi/pag/", "crime-type": "omicidio" },
+		{ "url": "https://www.modenatoday.it/tag/omicidio/pag/", "crime-type": "omicidio" },
+		{ "url": "https://www.modenatoday.it/tag/spaccio/pag/", "crime-type": "spaccio" },
+		{ "url": "https://www.modenatoday.it/tag/frodi/pag/", "crime-type": "frode" },
+		{ "url": "https://www.modenatoday.it/tag/rapina/pag/", "crime-type": "rapina" },
+		{ "url": "https://www.modenatoday.it/tag/riciclaggio/pag/", "crime-type": "riciclaggio" },
+		{ "url": "https://www.modenatoday.it/tag/rapine/pag/", "crime-type": "rapina" },
+		{ "url": "https://www.modenatoday.it/tag/truffe/pag/", "crime-type": "truffa" },
+		{ "url": "https://www.modenatoday.it/tag/sequestro/pag/", "crime-type": "sequestro" }
+	]
+}

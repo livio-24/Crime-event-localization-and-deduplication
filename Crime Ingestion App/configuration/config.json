@@ -1,0 +1,10 @@
+{
+    "database": {
+        "username": "postgres",
+        "password": "postgres"
+	}
+	
+	"num_of_pages": 2,
+	"note": "num_of_pages represents how many pages of each online newspaper will be queried to find news articles"
+
+}
