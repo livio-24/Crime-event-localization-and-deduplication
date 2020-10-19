@@ -43,16 +43,16 @@ public class NewsArticles {
 		int insertedNews = 0;
 
 		List < String > areas = new ArrayList < String > ();
-		areas = Utils.load_list("areaList_ModenaToday.txt");
+		areas = Utils.load_list("configuration/areaList_ModenaToday.txt");
 
 		List < String > municipalities = new ArrayList < String > ();
-		municipalities = Utils.load_list("municipalityList_ModenaToday.txt");
+		municipalities = Utils.load_list("configuration/municipalityList_ModenaToday.txt");
 
 		List < String > municipalitiesSemplified = new ArrayList < String > ();
-		municipalitiesSemplified = Utils.load_list("municipalitysemplifiedList_ModenaToday.txt");
+		municipalitiesSemplified = Utils.load_list("configuration/municipalitysemplifiedList_ModenaToday.txt");
 
 		List < String > stopwords = new ArrayList < String > ();
-		stopwords = Utils.load_list("stopwords.txt");
+		stopwords = Utils.load_list("configuration/stopwords.txt");
 
 		for (int count = 1; count <= pages; count++) {
 			String url_news_concatenated = url_news + count + "/";
@@ -477,16 +477,16 @@ public class NewsArticles {
 		int insertedNews = 0;
 
 		List < String > areas = new ArrayList < String > ();
-		areas = Utils.load_list("areaList_ModenaToday.txt");
+		areas = Utils.load_list("configuration/areaList_ModenaToday.txt");
 
 		List < String > municipalities = new ArrayList < String > ();
-		municipalities = Utils.load_list("municipalityList_ModenaToday.txt");
+		municipalities = Utils.load_list("configuration/municipalityList_ModenaToday.txt");
 
 		List < String > municipalitiesSemplified = new ArrayList < String > ();
-		municipalitiesSemplified = Utils.load_list("municipalitysemplifiedList_ModenaToday.txt");
+		municipalitiesSemplified = Utils.load_list("configuration/municipalitysemplifiedList_ModenaToday.txt");
 
 		List < String > stopwords = new ArrayList < String > ();
-		stopwords = Utils.load_list("stopwords.txt");
+		stopwords = Utils.load_list("configuration/stopwords.txt");
 
 		for (int count = 1; count <= pages; count++) {
 			Document document = Jsoup.connect(url_news + count).get();
