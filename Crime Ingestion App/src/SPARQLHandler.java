@@ -128,7 +128,7 @@ public class SPARQLHandler {
     	LongestSubstringOfTwoString lsots = new LongestSubstringOfTwoString();
     	
     	//Configuring connection to database
-		Object obj_config = new JSONParser().parse(new FileReader("config.json"));
+		Object obj_config = new JSONParser().parse(new FileReader("configuration/config.json"));
     	JSONObject jo_config = (JSONObject) obj_config;
     	JSONObject db = (JSONObject) jo_config.get("database");
     	String username = (String) db.get("username");
