@@ -28,11 +28,11 @@ public class Utils {
 	    String line = text;
 	    String comune =" ";
 		line = line.toLowerCase();
-		line = line.replaceAll("[0-9'.:,;_()\\“”\\-<>]", "");
+		line = line.replaceAll("[0-9'.:,;_()\\ï¿½ï¿½\\-<>]", "");
 		String[] r = line.split("\\s");
 		String frase="";
 		for (int x=0; x<r.length; x++){
-	    	if(r[x].endsWith(".") || r[x].endsWith(",") || r[x].endsWith(":") || r[x].endsWith("«") || r[x].endsWith("»") ){
+	    	if(r[x].endsWith(".") || r[x].endsWith(",") || r[x].endsWith(":") || r[x].endsWith("ï¿½") || r[x].endsWith("ï¿½") ){
 	    		a.add(r[x]);
 	    		break;
 	    	}
@@ -50,7 +50,7 @@ public class Utils {
 	static public String TheftObject(String text, List<String> stopwords) throws FileNotFoundException, IOException{
 		String object = "";
 		text = text.toLowerCase();
-		text = text.replaceAll("[0-9'.:,;_()\\“”\\-]", " ");
+		text = text.replaceAll("[0-9'.:,;_()\\ï¿½ï¿½\\-]", " ");
 		String[] s = text.split(" ");
 		List<String> ss = new ArrayList<String>();
 		for(int i=0; i<s.length; i++){
@@ -80,7 +80,7 @@ public class Utils {
 	static public String AggressionObject(String text, List<String> stopwords) throws FileNotFoundException, IOException{
 		String object = "";
 		text = text.toLowerCase();
-		text = text.replaceAll("[0-9'.:,;_()\\“”\\-]", " ");
+		text = text.replaceAll("[0-9'.:,;_()\\ï¿½ï¿½\\-]", " ");
 		String[] s = text.split(" ");
 		List<String> ss = new ArrayList<String>();
 		for(int i=0; i<s.length; i++){
@@ -112,7 +112,7 @@ public class Utils {
 	static public String MistreatmentObject(String text, List<String> stopwords) throws FileNotFoundException, IOException{
 		String object = "";
 		text = text.toLowerCase();
-		text = text.replaceAll("[0-9'.:,;_()\\“”\\-]", " ");
+		text = text.replaceAll("[0-9'.:,;_()\\ï¿½ï¿½\\-]", " ");
 		String[] s = text.split(" ");
 		List<String> ss = new ArrayList<String>();
 		for(int i=0; i<s.length; i++){
@@ -140,7 +140,7 @@ public class Utils {
 	static public String DrugsObject(String text, List<String> stopwords) throws FileNotFoundException, IOException{
 		String object = "";
 		text = text.toLowerCase();
-		text = text.replaceAll("[0-9'.:,;_()\\“”\\-]", " ");
+		text = text.replaceAll("[0-9'.:,;_()\\ï¿½ï¿½\\-]", " ");
 		String[] s = text.split(" ");
 		List<String> ss = new ArrayList<String>();
 		for(int i=0; i<s.length; i++){
@@ -165,7 +165,7 @@ public class Utils {
 	static public String MurderObject(String text, List<String> stopwords) throws FileNotFoundException, IOException{
 		String object = "";
 		text = text.toLowerCase();
-		text = text.replaceAll("[0-9'.:,;_()\\“”\\-]", " ");
+		text = text.replaceAll("[0-9'.:,;_()\\ï¿½ï¿½\\-]", " ");
 		String[] s = text.split(" ");
 		List<String> ss = new ArrayList<String>();
 		for(int i=0; i<s.length; i++){
@@ -190,7 +190,7 @@ public class Utils {
 	static public String LaunderingObject(String text, List<String> stopwords) throws FileNotFoundException, IOException{
 		String object = "";
 		text = text.toLowerCase();
-		text = text.replaceAll("[0-9'.:,;_()\\“”\\-]", " ");
+		text = text.replaceAll("[0-9'.:,;_()\\ï¿½ï¿½\\-]", " ");
 		String[] s = text.split(" ");
 		List<String> ss = new ArrayList<String>();
 		for(int i=0; i<s.length; i++){
@@ -214,7 +214,7 @@ public class Utils {
 	static public String FraudObject(String text, List<String> stopwords) throws FileNotFoundException, IOException{
 		String object = "";
 		text = text.toLowerCase();
-		text = text.replaceAll("[0-9'.:,;_()\\“”\\-]", " ");
+		text = text.replaceAll("[0-9'.:,;_()\\ï¿½ï¿½\\-]", " ");
 		String[] s = text.split(" ");
 		List<String> ss = new ArrayList<String>();
 		for(int i=0; i<s.length; i++){
@@ -238,7 +238,7 @@ public class Utils {
 	static public String RobberyObject(String text, List<String> stopwords) throws FileNotFoundException, IOException{
 		String object = "";
 		text = text.toLowerCase();
-		text = text.replaceAll("[0-9'.:,;_()\\“”\\-]", " ");
+		text = text.replaceAll("[0-9'.:,;_()\\ï¿½ï¿½\\-]", " ");
 		String[] s = text.split(" ");
 		List<String> ss = new ArrayList<String>();
 		for(int i=0; i<s.length; i++){
@@ -263,7 +263,7 @@ public class Utils {
 	static public String DDealingObject(String text, List<String> stopwords) throws FileNotFoundException, IOException{
 		String object = "";
 		text = text.toLowerCase();
-		text = text.replaceAll("[0-9'.:,;_()\\“”\\-]", " ");
+		text = text.replaceAll("[0-9'.:,;_()\\ï¿½ï¿½\\-]", " ");
 		String[] s = text.split(" ");
 		List<String> ss = new ArrayList<String>();
 		for(int i=0; i<s.length; i++){
@@ -289,7 +289,7 @@ public class Utils {
 	static public String ScamsObject(String text, List<String> stopwords) throws FileNotFoundException, IOException{
 		String object = "";
 		text = text.toLowerCase();
-		text = text.replaceAll("[0-9'.:,;_()\\“”\\-]", " ");
+		text = text.replaceAll("[0-9'.:,;_()\\ï¿½ï¿½\\-]", " ");
 		String[] s = text.split(" ");
 		List<String> ss = new ArrayList<String>();
 		for(int i=0; i<s.length; i++){
@@ -313,7 +313,7 @@ public class Utils {
 	static public String SeizuresObject(String text, List<String> stopwords) throws FileNotFoundException, IOException{
 		String object = "";
 		text = text.toLowerCase();
-		text = text.replaceAll("[0-9'.:,;_()\\“”\\-]", " ");
+		text = text.replaceAll("[0-9'.:,;_()\\ï¿½ï¿½\\-]", " ");
 		String[] s = text.split(" ");
 		List<String> ss = new ArrayList<String>();
 		for(int i=0; i<s.length; i++){
@@ -339,7 +339,7 @@ public class Utils {
 	static public String EvasionObject(String text, List<String> stopwords) throws FileNotFoundException, IOException{
 		String object = "";
 		text = text.toLowerCase();
-		text = text.replaceAll("[0-9'.:,;_()\\“”\\-]", " ");
+		text = text.replaceAll("[0-9'.:,;_()\\ï¿½ï¿½\\-]", " ");
 		String[] s = text.split(" ");
 		List<String> ss = new ArrayList<String>();
 		for(int i=0; i<s.length; i++){
@@ -364,7 +364,7 @@ public class Utils {
 	static public String SAssoultObject(String text, List<String> stopwords) throws FileNotFoundException, IOException{
 		String object = "";
 		text = text.toLowerCase();
-		text = text.replaceAll("[0-9'.:,;_()\\“”\\-]", " ");
+		text = text.replaceAll("[0-9'.:,;_()\\ï¿½ï¿½\\-]", " ");
 		String[] s = text.split(" ");
 		List<String> ss = new ArrayList<String>();
 		for(int i=0; i<s.length; i++){
@@ -392,10 +392,10 @@ public class Utils {
 	    String line = text;
 	    String comune =" ";
 		line = line.toLowerCase();
-		line = line.replaceAll("[0-9';\\-()//“”<>]", " ");		
+		line = line.replaceAll("[0-9';\\-()//ï¿½ï¿½<>]", " ");		
 		String[] r = line.split("\\s");	
 		for (int x=0; x<r.length; x++){
-	    	if(r[x].endsWith(".") || r[x].endsWith(",") || r[x].endsWith(":") || r[x].endsWith("«") || r[x].endsWith("»") ){
+	    	if(r[x].endsWith(".") || r[x].endsWith(",") || r[x].endsWith(":") || r[x].endsWith("ï¿½") || r[x].endsWith("ï¿½") ){
 	    		a.add(r[x]);
 	    		break;
 	    	}
@@ -407,8 +407,8 @@ public class Utils {
 			comune= comune.replace(".", "");
 			comune= comune.replace(",", "");
 			comune= comune.replace(":", "");
-			comune= comune.replace("«", "");
-			comune= comune.replace("»", "");
+			comune= comune.replace("ï¿½", "");
+			comune= comune.replace("ï¿½", "");
 			return comune;				
 		}
 		
@@ -417,8 +417,8 @@ public class Utils {
 			comune= comune.replace(".", "");
 			comune= comune.replace(",", "");
 			comune= comune.replace(":", "");
-			comune= comune.replace("«", "");
-			comune= comune.replace("»", "");
+			comune= comune.replace("ï¿½", "");
+			comune= comune.replace("ï¿½", "");
 			return comune;
 		}
 		
@@ -427,8 +427,8 @@ public class Utils {
 			comune= comune.replace(".", "");
 			comune= comune.replace(",", "");
 			comune= comune.replace(":", "");
-			comune= comune.replace("«", "");
-			comune= comune.replace("»", "");
+			comune= comune.replace("ï¿½", "");
+			comune= comune.replace("ï¿½", "");
 			return comune;
 		}
 		else
@@ -441,11 +441,11 @@ public class Utils {
 	    String line = text;
 	    String area =" ";
 		line = line.toLowerCase();
-		line = line.replaceAll("[0-9';\\()//“”<>]\\-", " ");
+		line = line.replaceAll("[0-9';\\()//ï¿½ï¿½<>]\\-", " ");
 		String[] r = line.split("\\s");
 		
 	    for (int x=0; x<r.length; x++){
-	    	if(r[x].endsWith(".") || r[x].endsWith(",") || r[x].endsWith(":") || r[x].endsWith("«") || r[x].endsWith("»") ){
+	    	if(r[x].endsWith(".") || r[x].endsWith(",") || r[x].endsWith(":") || r[x].endsWith("ï¿½") || r[x].endsWith("ï¿½") ){
 	    		a.add(r[x]);
 	    		break;
 	    	}
@@ -457,8 +457,8 @@ public class Utils {
 			area= area.replace(".", "");
 			area= area.replace(",", "");
 			area= area.replace(":", "");
-			area= area.replace("«", "");
-			area= area.replace("»", "");
+			area= area.replace("ï¿½", "");
+			area= area.replace("ï¿½", "");
 			return area;
 		}
 		else if(a.size()==2) {
@@ -466,8 +466,8 @@ public class Utils {
 			area= area.replace(".", "");
 			area= area.replace(",", "");
 			area= area.replace(":", "");
-			area= area.replace("«", "");
-			area= area.replace("»", "");
+			area= area.replace("ï¿½", "");
+			area= area.replace("ï¿½", "");
 			return area;				
 		}
 		else if(a.size()==3) {
@@ -475,8 +475,8 @@ public class Utils {
 			area= area.replace(".", "");
 			area= area.replace(",", "");
 			area= area.replace(":", "");
-			area= area.replace("«", "");
-			area= area.replace("»", "");
+			area= area.replace("ï¿½", "");
+			area= area.replace("ï¿½", "");
 			return area;
 		}
 				
@@ -485,8 +485,8 @@ public class Utils {
 			area= area.replace(".", "");
 			area= area.replace(",", "");
 			area= area.replace(":", "");
-			area= area.replace("«", "");
-			area= area.replace("»", "");
+			area= area.replace("ï¿½", "");
+			area= area.replace("ï¿½", "");
 			return area;
 		}
 		else
