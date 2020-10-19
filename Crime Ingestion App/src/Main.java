@@ -23,7 +23,7 @@ public class Main {
 	public static void main(String[] args) throws Exception {
 		
 		//Configuring database connection
-		Object obj = new JSONParser().parse(new FileReader("config.json"));
+		Object obj = new JSONParser().parse(new FileReader("configuration/config.json"));
     	JSONObject jo = (JSONObject) obj;
     	JSONObject db = (JSONObject) jo.get("database");
     	String username = (String) db.get("username");
@@ -37,7 +37,7 @@ public class Main {
 		NewsArticles news_articles = new NewsArticles();
 		
 		System.out.println("ModenaToday");
-		JSONObject obj_MT = (JSONObject) new JSONParser().parse(new FileReader("modenatoday.json"));
+		JSONObject obj_MT = (JSONObject) new JSONParser().parse(new FileReader("configuration/modenatoday.json"));
 		JSONArray ja_MT = (JSONArray) obj_MT.get("urls");
 		Iterator<JSONObject> iterator_MT = ja_MT.iterator();
         while(iterator_MT.hasNext()) {
@@ -51,7 +51,7 @@ public class Main {
         }
 
         System.out.println("Gazzetta di Modena");        
-        JSONObject obj_GM = (JSONObject) new JSONParser().parse(new FileReader("gazzettadimodena.json"));
+        JSONObject obj_GM = (JSONObject) new JSONParser().parse(new FileReader("configuration/gazzettadimodena.json"));
 		JSONArray ja_GM = (JSONArray) obj_GM.get("urls");
 		Iterator<JSONObject> iterator_GM = ja_GM.iterator();
         while(iterator_GM.hasNext()) {
