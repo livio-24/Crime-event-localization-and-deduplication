@@ -141,7 +141,7 @@ public class Heideltime {
     
 	public static Date findEventDate(String text, Date date_sql) {
         
-        HeidelTimeStandalone heidelTimeStandalone = new HeidelTimeStandalone(Language.ITALIAN, DocumentType.NEWS, OutputType.XMI, "config.props");
+        HeidelTimeStandalone heidelTimeStandalone = new HeidelTimeStandalone(Language.ITALIAN, DocumentType.NEWS, OutputType.XMI, "configuration/config.props");
 
     	int cont = 0;
     	int found = 0;
