@@ -266,7 +266,7 @@ public void DeleteRowLinks(String url, Connection conn){
 											score += 0.015;
 									}
 						
-									//calcolo il valore della similarità normalizzato									
+									//calcolo il valore della similaritï¿½ normalizzato									
 									double text = c.similarity(news.get(i).text ,news.get(j).text);
 									double title = c2.similarity(news.get(i).title ,news.get(j).title);
 									double description = c3.similarity(news.get(i).description ,news.get(j).description);
@@ -285,8 +285,8 @@ public void DeleteRowLinks(String url, Connection conn){
 									
 									comparison++;
 									
-									// normalizzo il valore di value tenendo conto che score è già normalizzato (compreso tra 0 e 1)
-									// il valore massimo di value è 0,025+0,03+1=1,055
+									// normalizzo il valore di value tenendo conto che score ï¿½ giï¿½ normalizzato (compreso tra 0 e 1)
+									// il valore massimo di value ï¿½ 0,025+0,03+1=1,055
 									value = value/1.055;
 									
 									if (value > threshold) {
@@ -441,7 +441,7 @@ public void DeleteRowLinks(String url, Connection conn){
 											score = score + 0.015;
 									}
 				
-									//calcolo il valore della similarità normalizzato
+									//calcolo il valore della similaritï¿½ normalizzato
 									
 									double text = c.similarity(news.get(i).text ,news.get(j).text);
 									double title = c2.similarity(news.get(i).title ,news.get(j).title);
@@ -461,8 +461,8 @@ public void DeleteRowLinks(String url, Connection conn){
 									
 									comparison++;
 									
-									// normalizzo il valore di value tenendo conto che score è già normalizzato (compreso tra 0 e 1)
-									// il valore massimo di value è 0,025+0,03+1=1,055
+									// normalizzo il valore di value tenendo conto che score ï¿½ giï¿½ normalizzato (compreso tra 0 e 1)
+									// il valore massimo di value ï¿½ 0,025+0,03+1=1,055
 									value = value/1.055;
 		
 									if (value > threshold) {
