@@ -31,7 +31,7 @@ public class Main {
     	Integer num_of_pages = ((Long) (jo.get("num_of_pages"))).intValue();
 		
 		Class.forName("org.postgresql.Driver");
-		String url = "jdbc:postgresql://localhost/postgres?user="+username+"&password="+password;
+		String url = "jdbc:postgresql://localhost/crime_news?currentSchema=crime_news&user="+username+"&password="+password;
 		Connection conn = DriverManager.getConnection(url);
 		
 		NewsArticles news_articles = new NewsArticles();
