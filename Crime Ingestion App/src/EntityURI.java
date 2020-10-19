@@ -50,7 +50,7 @@ public class EntityURI {
 	public static void main(String[] args) throws ClassNotFoundException, FileNotFoundException, IOException, ParseException {
 		// TODO Auto-generated method stub
 
-		Object obj = new JSONParser().parse(new FileReader("config.json"));
+		Object obj = new JSONParser().parse(new FileReader("configuration/config.json"));
     	JSONObject jo = (JSONObject) obj;
     	JSONObject db = (JSONObject) jo.get("database");
     	String username = (String) db.get("username");
