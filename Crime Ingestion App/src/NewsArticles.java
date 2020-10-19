@@ -157,7 +157,7 @@ public class NewsArticles {
 							org.jsoup.select.Elements paragraphs = body.getElementsByTag("p");
 							String textBody = new String();
 							for (Element paragraph: paragraphs) {
-								if (!paragraph.text().toString().startsWith("Attendere un istante") && !paragraph.text().toString().startsWith("oppure fai il login") && !paragraph.text().toString().startsWith("Il meglio delle notizie dall'italia") && !paragraph.text().toString().startsWith("Leader nell'informazione") && !paragraph.text().toString().startsWith("© Copyright") && !paragraph.text().toString().startsWith("oppure usa il tuo account") && !paragraph.text().toString().startsWith("R:") && !paragraph.text().toString().isEmpty()) textBody = textBody.concat(paragraph.text() + " ");
+								if (!paragraph.text().toString().startsWith("Attendere un istante") && !paragraph.text().toString().startsWith("oppure fai il login") && !paragraph.text().toString().startsWith("Il meglio delle notizie dall'italia") && !paragraph.text().toString().startsWith("Leader nell'informazione") && !paragraph.text().toString().startsWith("ï¿½ Copyright") && !paragraph.text().toString().startsWith("oppure usa il tuo account") && !paragraph.text().toString().startsWith("R:") && !paragraph.text().toString().isEmpty()) textBody = textBody.concat(paragraph.text() + " ");
 							}
 							textBody = textBody.replace(" Il meglio delle notizie dall'Italia e dal mondo", "");
 							textBody = textBody.replace(description, "");
@@ -372,10 +372,10 @@ public class NewsArticles {
 										if (!lat.equals("") && !lon.equals("")) {
 											address = location;
 											break;
-										} // se è positivo
+										} // se ï¿½ positivo
 										else {
 											k = cont;
-										} // se è negativo riparte saltando la via trovata ma che non ha fornito coordinate
+										} // se ï¿½ negativo riparte saltando la via trovata ma che non ha fornito coordinate
 									}
 
 								}
@@ -552,7 +552,7 @@ public class NewsArticles {
 								org.jsoup.select.Elements paragraphs = body.select("div[class='entry_content'][id='article-body']");
 								String textBody = new String();
 								for (Element paragraph: paragraphs) {
-									if (!paragraph.text().toString().startsWith("Attendere un istante") && !paragraph.text().toString().startsWith("oppure fai il login") && !paragraph.text().toString().startsWith("Il meglio delle notizie dall'italia") && !paragraph.text().toString().startsWith("Leader nell'informazione") && !paragraph.text().toString().startsWith("© Copyright") && !paragraph.text().toString().startsWith("oppure usa il tuo account") && !paragraph.text().toString().startsWith("R:") && !paragraph.text().toString().isEmpty()) textBody = textBody.concat(paragraph.text() + " ");
+									if (!paragraph.text().toString().startsWith("Attendere un istante") && !paragraph.text().toString().startsWith("oppure fai il login") && !paragraph.text().toString().startsWith("Il meglio delle notizie dall'italia") && !paragraph.text().toString().startsWith("Leader nell'informazione") && !paragraph.text().toString().startsWith("ï¿½ Copyright") && !paragraph.text().toString().startsWith("oppure usa il tuo account") && !paragraph.text().toString().startsWith("R:") && !paragraph.text().toString().isEmpty()) textBody = textBody.concat(paragraph.text() + " ");
 								}
 								System.out.println("Body " + textBody);
 
@@ -674,7 +674,7 @@ public class NewsArticles {
 									municipality = "savigano sul panaro";
 								}
 
-								// determinare se è una notizia relativa ad un crimine o meno
+								// determinare se ï¿½ una notizia relativa ad un crimine o meno
 								int notizia = 1;
 
 								if (!municipality.equals(" ") || !municipality.equals("")) notizia = 0;
@@ -785,10 +785,10 @@ public class NewsArticles {
 										if (!lat.equals("") && !lon.equals("")) {
 											address = location;
 											break;
-										} // se è positivo
+										} // se ï¿½ positivo
 										else {
 											k = cont;
-										} // se è negativo riparte saltando la via trovata ma che non ha fornito coordinate
+										} // se ï¿½ negativo riparte saltando la via trovata ma che non ha fornito coordinate
 									}
 
 								}
