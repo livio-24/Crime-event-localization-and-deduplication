@@ -12,7 +12,7 @@ public class Utils {
 	 */
 	static public List<String> load_list(String filename) throws FileNotFoundException, IOException {
 		List<String> list = new ArrayList<String>();
-		try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
+		try (BufferedReader br = new BufferedReader(new FileReader("configuration/" + filename))) {
 		    String line;
 		    while ((line = br.readLine()) != null) {
 		    	list.add(line.trim());
@@ -22,7 +22,7 @@ public class Utils {
 	}
 	
 	//metodo per provare a trovare il comune 	
-	static public String getComuneStringa(String text) throws FileNotFoundException, IOException{
+	static public String getComuneStringa(String text) throws FileNotFoundException, IOException {
 		
 		ArrayList a= new ArrayList();		
 	    String line = text;
