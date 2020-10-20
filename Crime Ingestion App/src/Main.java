@@ -46,8 +46,12 @@ public class Main {
         	String crime_type = (String) obj_iterator.get("crime-type");
         	System.out.println(url_news);
         	System.out.println(crime_type);
-        	int insertedNews = news_articles.addNewsMT(conn, num_of_pages, url_news, crime_type);
-        	System.out.println(insertedNews + " news inserted related to " + crime_type + " - ModenaToday");
+		try {
+	        	int insertedNews = news_articles.addNewsMT(conn, num_of_pages, url_news, crime_type);
+        		System.out.println(insertedNews + " news inserted related to " + crime_type + " - ModenaToday");
+		} catch (Exception ex){
+		
+		}
         }
 
         System.out.println("Gazzetta di Modena");        
@@ -60,8 +64,12 @@ public class Main {
         	String crime_type = (String) obj_iterator.get("crime-type");
         	System.out.println(url_news);
         	System.out.println(crime_type);
-        	int insertedNews = news_articles.addNewsGM(conn, num_of_pages, url_news, crime_type);
-        	System.out.println(insertedNews + " news inserted related to " + crime_type + " - Gazzetta di Modena");
+		try {
+	        	int insertedNews = news_articles.addNewsGM(conn, num_of_pages, url_news, crime_type);
+        		System.out.println(insertedNews + " news inserted related to " + crime_type + " - Gazzetta di Modena");
+		} catch (Exception ex){
+		
+		}
         }
         
     	// Trying to find missing geom with LinkedGeoData
