@@ -57,7 +57,7 @@ public class EntityURI {
     	String password = (String) db.get("password");
 		
 		Class.forName("org.postgresql.Driver");
-		String url = "jdbc:postgresql://localhost/postgres?user="+username+"&password="+password;
+		String url = "jdbc:postgresql://localhost/postgres?currentSchema=crime_news&user="+username+"&password="+password;
 		try {
 			Connection conn = DriverManager.getConnection(url);
 			Statement st = conn.createStatement();
