@@ -82,6 +82,8 @@ public class Main {
 			System.out.println("linkedgeodata/sparql service not available");
 		} catch (QueryExceptionHTTP e3){
 			System.out.println("linkedgeodata/sparql service not available");
+		} catch (NullPointerException e4) {
+			
 		}
 		
 		// Searching duplicates
