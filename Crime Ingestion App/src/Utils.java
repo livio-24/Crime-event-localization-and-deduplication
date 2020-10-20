@@ -12,7 +12,7 @@ public class Utils {
 	 */
 	static public List<String> load_list(String filename) throws FileNotFoundException, IOException {
 		List<String> list = new ArrayList<String>();
-		try (BufferedReader br = new BufferedReader(new FileReader("configuration/" + filename))) {
+		try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
 		    String line;
 		    while ((line = br.readLine()) != null) {
 		    	list.add(line.trim());
