@@ -21,7 +21,7 @@ CREATE TABLE crime_news.duplicate (
     algorithm integer NOT NULL,
     value double precision NOT NULL,
     constraint duplicate_pk primary key (id_news1, id_news2, algorithm),
-    constraint duplicate_algorithm_fk foreign key (algorithm) references crime_news.link(id),
+    constraint duplicate_algorithm_fk foreign key (algorithm) references crime_news.algorithm(id),
     constraint duplicate_link_fk1 foreign key (id_news1) references crime_news.link(id),
     constraint duplicate_link_fk2 foreign key (id_news2) references crime_news.link(id)
 );
