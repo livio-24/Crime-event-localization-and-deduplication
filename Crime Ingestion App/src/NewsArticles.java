@@ -404,7 +404,7 @@ public class NewsArticles {
 							System.out.println("longitude:" + lon);
 
 							if (!lat.equals("") && !lon.equals("")) {
-								PreparedStatement insertNews = conn.prepareStatement("INSERT INTO crime_news.news (url, title, description, text, municipality, area, address, date_publication, time_publication, geom, object, newspaper, tag, is_general, date_event) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ST_GeomFromText(?,4326), ?, ?, ?, ?, ?) on conflict do nothing");
+								PreparedStatement insertNews = conn.prepareStatement("INSERT INTO crime_news.news (url, title, description, text, municipality, area, address, date_publication, time_publication, geom, object, newspaper, tag, is_general, date_event) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, public.ST_GeomFromText(?,4326), ?, ?, ?, ?, ?) on conflict do nothing");
 								insertNews.setString(1, link);
 								insertNews.setString(2, title);
 								insertNews.setString(3, description);
