@@ -104,7 +104,7 @@ class MainHandler(tornado.web.RequestHandler):
             results=cur.fetchone()
             max_month = str(results[0]).replace('.0','')
             max_year = str(results[1]).replace('.0','')
-            cur.execute("select url, title, description, text, date_event, newspaper, tag, ST_AsText(geom) \
+            cur.execute("select url, title, description, text, date_event, newspaper, tag, public.ST_AsText(geom) \
                          from crime_news.news \
                          where extract(month from date_event) = "+max_month+" and extract(year from date_event) = "+max_year)
             results=cur.fetchall()
@@ -162,7 +162,7 @@ class MainHandler(tornado.web.RequestHandler):
             year = self.get_argument("year", default=None, strip=False)
             m = folium.Map(location=[44.647114, 10.925244], tiles="CartoDB positron", zoom_start=11, height=520)
             marker_cluster = MarkerCluster().add_to(m)
-            cur.execute("select url, title, description, text, date_event, newspaper, tag, ST_AsText(geom) \
+            cur.execute("select url, title, description, text, date_event, newspaper, tag, public.ST_AsText(geom) \
                          from crime_news.news \
                          where extract(year from date_event) = "+year+" \
 						 and extract(month from date_event) = "+month)
