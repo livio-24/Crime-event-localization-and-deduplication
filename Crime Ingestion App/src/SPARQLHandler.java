@@ -143,10 +143,10 @@ public class SPARQLHandler {
     	ResultSet rs = st.executeQuery("SELECT concat(title, description, text) as textual, municipality, area, url "
     									+ "FROM crime_news.news "
     									+ "WHERE (geom is null "
-    									+ "OR ((ST_X(geom::geometry)< 10.5444 "
-    									+ "or ST_X(geom::geometry)> 11.3864) " 
-    									+ "or (ST_Y(geom::geometry)< 44.0542 "
-    									+ "or ST_Y(geom::geometry)> 44.9613))) ");
+    									+ "OR ((ST_X(geom)< 10.5444 "
+    									+ "or ST_X(geom)> 11.3864) " 
+    									+ "or (ST_Y(geom)< 44.0542 "
+    									+ "or ST_Y(geom)> 44.9613))) ");
     	
     	int new_geom=0;
     	int new_org=0;
