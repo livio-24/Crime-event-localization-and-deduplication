@@ -885,9 +885,9 @@ public class NewsArticles {
 						//e.printStackTrace();
 					}
 				}
-				catch(Exception e){
-					
-				}
+			}
+			catch(Exception e){
+
 			}
 		}
 
