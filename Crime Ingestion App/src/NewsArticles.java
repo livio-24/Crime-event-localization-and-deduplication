@@ -496,6 +496,7 @@ public class NewsArticles {
 			String link = "";
 			org.jsoup.select.Elements links = document.select("a[href]");
 			for (Element element: links) {
+				try {
 				if (element.attr("href").startsWith("https://gazzettadimodena.gelocal.it/modena/cronaca/") || element.attr("href").startsWith("https://gazzettadimodena.gelocal.it/modena/cronaca/")
 				/* && element.attr("href").endsWith(".html")*/
 				) {
@@ -883,6 +884,9 @@ public class NewsArticles {
 						// TODO Auto-generated catch block
 						//e.printStackTrace();
 					}
+				}
+				catch(Exception e){
+					
 				}
 			}
 		}
