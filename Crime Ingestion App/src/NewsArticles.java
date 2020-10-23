@@ -891,7 +891,11 @@ public class NewsArticles {
 			}
 		}
 
-		return insertedNews;
+		
 
+		}
+		return insertedNews;
 	}
+	
+	
 }
