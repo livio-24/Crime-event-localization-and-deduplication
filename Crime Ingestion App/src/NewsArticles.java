@@ -887,7 +887,7 @@ public class NewsArticles {
 				}
 			}
 			catch(Exception e){
-
+				continue;
 			}
 		}
 
