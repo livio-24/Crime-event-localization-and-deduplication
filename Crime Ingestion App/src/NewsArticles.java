@@ -459,6 +459,9 @@ public class NewsArticles {
 						
 					} catch(java.lang.NullPointerException e) {
 						
+					} catch(IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
 					}
 				}
 			}
@@ -469,7 +472,6 @@ public class NewsArticles {
 	}
 
 	public int addNewsGM(Connection conn, Integer pages, String url_news, String crime_type) throws FileNotFoundException,
-	IOException,
 	SQLException,
 	ParseException,
 	Exception {
