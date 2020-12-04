@@ -54,3 +54,20 @@ CREATE TABLE crime_news.entity (
     constraint entity_pk primary key (url_news, entity, entity_type),
     constraint entity_news_fk foreign key (url_news) references crime_news.news(url)
 );
+
+create table crime_news.gold_standard_configuration(
+    id serial primary key,
+    description text
+);
+
+
+create table crime_news.gold_standard(
+    id_news1 integer,
+    id_news2 integer,
+    id_gold_standard_configuration integer,
+    constraint gold_standard_PK primary key (id_news1, id_news2, id_gold_standard_configuration),
+    constraint gold_standard_FK1 foreign key (id_news1) references crime_news.link(id),
+    constraint gold_standard_FK2 foreign key (id_news2) references crime_news.link(id),
+    constraint gold_standard_FK3 foreign key (id_gold_standard_configuration) references crime_news.gold_standard_configuration(id),
+    constraint check_id_news check(id_news1<id_news2)
+);
