@@ -17,4 +17,4 @@ requests==2.24.0
 six==1.15.0
 squarify==0.4.3
 tornado==6.0.4
-urllib3==1.25.10
+urllib3==1.26.19
