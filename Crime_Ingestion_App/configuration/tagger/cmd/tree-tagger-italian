@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# Set these paths appropriately
+
+BIN="/home/livio24/Documents/Crime-event-localization-and-deduplication/Crime_Ingestion_App/configuration/tagger/bin"
+CMD="/home/livio24/Documents/Crime-event-localization-and-deduplication/Crime_Ingestion_App/configuration/tagger/cmd"
+LIB="/home/livio24/Documents/Crime-event-localization-and-deduplication/Crime_Ingestion_App/configuration/tagger/lib"
+
+OPTIONS="-token -lemma -sgml"
+
+TOKENIZER=${CMD}/utf8-tokenize.perl
+TAGGER=${BIN}/tree-tagger
+ABBR_LIST=${LIB}/italian-abbreviations
+PARFILE=${LIB}/italian.par
+
+$TOKENIZER -i -a $ABBR_LIST $* |
+$TAGGER $OPTIONS $PARFILE
